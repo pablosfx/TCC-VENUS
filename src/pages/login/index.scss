@@ -1,9 +1,16 @@
+
+    
 .cont{
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items:  center;
 height: 48rem;
+
+
+
+background: linear-gradient(90deg, #000000 0%, #1E1E1E 99.96%, #474747 99.97%, #282828 99.98%, #1E1E1E 99.99%, #1D1D1D 99.99%, #666666 100%);
+
 img{
     width:250px ;
 }
@@ -12,30 +19,53 @@ img{
     height: 300px;
     display: flex;
     flex-direction: column;
+     color: #ffff;
     
 }
 .cont2{
     border: 1px solid black;
     flex-direction: column;
     display: flex;
-    height: 500px;
-    width: 400px;
+    height: 550px;
+    width: 650px;
     border-radius: 10px;
     align-items: center;
+    background-color: #000;
+    gap: 30px;
+
+    h1{
+        color: #8c20ff;
+        font-size: 50px;
+        
+    }
     input{
-       width: 200px;
+       width: 280px;
        height: 45px;
        font-size: 20px;
+       background-color: #000;
+       border-radius: 2px;
+       border-style: none;
+
+       
+
+       
+
     }
     .continuar{
         width: 200px;
-        height: 45px;
+        height: 58px;
         font-size: 20px;
+        background-color: #8c20ff;
+        color: #ffff;
+        border-radius: 1px;
     }
     .sair{
         width: 100px;
         height: 30px;
         font-size: 20px;
+        background-color: #8c20ff;
+        color: #ffff;
+        border-radius: 1px;
 
     }
     

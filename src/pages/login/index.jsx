@@ -11,10 +11,10 @@ export default function Login  (){
             <p>Você esta  prestes a entrar  em modo adimin!</p></div>
              <div className='cont2'>
                 <h1>Login Admin</h1>
-            <input className='usuario' type="text" placeholder="Usuario:" />
-            <input className='senha' type="text" placeholder="Senha:" />
+            <input type="text" placeholder="Usuario:" />
+            <input type="text" placeholder="Senha:" />
             <button className='continuar'>Continuar</button>
-            <button className='sair'>sair</button>
+           
             </div>
           </div>
         </div>
