@@ -1,0 +1,46 @@
+.cont{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items:  center;
+height: 48rem;
+img{
+    width:250px ;
+}
+.cont1{
+    border: 1px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cont2{
+    border: 1px solid black;
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 400px;
+    border-radius: 10px ;
+    align-items: center ;
+    input{
+       width: 200px;
+       height: 45px;
+       font-size: 20px;
+    }
+    .continuar{
+        width: 200px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .sair{
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+
+    }
+    
+}
+
+
+
+}
