@@ -20,6 +20,8 @@ img{
     display: flex;
     flex-direction: column;
      color: #ffff;
+     align-items: center;
+     padding: 30px;
     
 }
 .cont2{
@@ -57,7 +59,8 @@ img{
         font-size: 20px;
         background-color: #8c20ff;
         color: #ffff;
-        border-radius: 1px;
+        border-radius: 3px;
+        border: none;
     }
     .sair{
         width: 100px;
