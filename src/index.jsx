@@ -4,6 +4,7 @@ import './index.scss';
 import App from './pages/app/index';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
+import Cadastrar from './pages/cadastrar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path='/' element={<App/>}/>  
       <Route path='/login' element={<Login/>}/>
+      <Route path='/cadastrar' element={<Cadastrar/>}/>
     </Routes>
     </BrowserRouter>
     

@@ -23,6 +23,7 @@ export default function App() {
       <input className='pesquisa' type="text" placeholder='O que você procura?' />
       <Link to={'/login'}> <img className='usuario' src="/assets/images/usuario.png"/></Link>
       <img className='carrinho' src="/assets/images/carrinho.png"/>
+      <Link to={'/cadastrar'}>  <button className='continuar'>CADASTRAR-SE</button></Link>  
     </div>
     <div className='categorias'>
         <div
