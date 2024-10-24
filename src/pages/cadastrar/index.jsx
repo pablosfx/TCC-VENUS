@@ -42,15 +42,17 @@ export default function Consultar() {
     };
 
     return (
-        <div className='pagina-consultar'>
-            <h1> CONSULTAR </h1>
+        <div className='area-cadastro'>
+            
 
-            <div className='input'>
-                <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
-                <input  type="text" placeholder="Nome do Cliente" value={nomecliente} onChange={(e) => setNomeCliente(e.target.value)} />
-                <input type="text" placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
-                <button className='consulta' onClick={adicionarCliente}>Adicionar Cliente</button>
+            <div className='cadastro'>
+            <h1>Insira suas Informações <br/> para criar sua conta</h1>
+                <div className='input-cadastro'>
+                <input className='email' type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className='senha' type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                <input className='nome-do-usuario-C' type="text" placeholder="Nome do Cliente" value={nomecliente} onChange={(e) => setNomeCliente(e.target.value)} />
+                <input className='telefone' type="text" placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} /></div>
+                <button  className='criar' onClick={adicionarCliente}>Criar </button>
             </div>
 
             <table>

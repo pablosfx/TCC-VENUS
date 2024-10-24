@@ -21,9 +21,9 @@ export default function App() {
     <div className="cabecalho">
      <img className='logo' src="/assets/images/logo.svg"/>
       <input className='pesquisa' type="text" placeholder='O que você procura?' />
-      <Link to={'/login'}> <img className='usuario' src="/assets/images/usuario.png"/></Link>
+      <Link to={'/cadastrar'}> <img className='usuario' src="/assets/images/usuario.png"/></Link>
       <img className='carrinho' src="/assets/images/carrinho.png"/>
-      <Link to={'/cadastrar'}>  <button className='continuar'>CADASTRAR-SE</button></Link>  
+       
     </div>
     <div className='categorias'>
         <div
