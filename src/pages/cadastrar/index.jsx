@@ -29,7 +29,7 @@ export default function Consultar() {
         try {
             await axios.post(url, novoCliente);
             setCadastrar([...cadastrar, novoCliente]);
-            // Limpar os campos
+            
             setEmail('');
             setSenha('');
             setNomeCliente('');
@@ -46,12 +46,13 @@ export default function Consultar() {
             
 
             <div className='cadastro'>
-            <h1>Insira suas Informações <br/> para criar sua conta</h1>
+            <h1 className='titulo-cadastro'>Insira suas Informações  para criar sua conta</h1>
                 <div className='input-cadastro'>
-                <input className='email' type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input className='senha' type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
-                <input className='nome-do-usuario-C' type="text" placeholder="Nome do Cliente" value={nomecliente} onChange={(e) => setNomeCliente(e.target.value)} />
-                <input className='telefone' type="text" placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} /></div>
+                <input className='email' type="text" placeholder="Email:" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className='senha' type="password" placeholder="Senha:" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                <input className='nome-do-usuario-C' type="text" placeholder="Nome:" value={nomecliente} onChange={(e) => setNomeCliente(e.target.value)} />
+                <input className='telefone' type="text" placeholder="Telefone:" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
+                </div>
                 <button  className='criar' onClick={adicionarCliente}>Criar </button>
             </div>
 

@@ -2,6 +2,7 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import TooltipCategorias from '../../components/barra-de-categorias';
 
 
 
@@ -35,45 +36,8 @@ export default function App() {
             <div className="tooltip">Informações sobre Esportes</div>
           )}
         </div>
+         <TooltipCategorias/>
         
-        <div
-          onMouseEnter={() => mostrarTela('Masculino')}
-          onMouseLeave={esconderTela}
-        >
-          
-          
-           
-          
-          <Link to="#">Masculino</Link>
-          {categoriaVIsivel === 'Masculino' && (
-            <div className="tooltip"><div className='linha1'>
-               <li> <Link>Calçados</Link></li>
-              <li><Link>Chueteiras</Link></li>
-              <li> <Link>Chinelos</Link></li>
-              <li> <Link>Tênis</Link></li>
-              <li><Link>Tênis Skate</Link></li>
-              <li><Link>Botas</Link></li>
-           </div>
-            
-            <div className='linha2'>
-              <li><Link>Roupas</Link></li>
-              <li><Link>Camisetas</Link></li>
-              <li><Link>Calças</Link></li>
-              <li><Link>Bermudas</Link></li>
-              <li><Link>Blusas</Link></li>
-              <li><Link>Regatas</Link></li></div>
-
-            <div className='linha3'>
-              <li> <Link>Acessorios</Link></li>
-              <li> <Link>Óculos de natação</Link></li>
-              <li><Link>Testeira</Link></li>
-              <li><Link>Bonés</Link></li>
-              <li> <Link>Cotoveleira</Link></li>
-              <li> <Link>Joelheira</Link></li>
-          </div>
-            </div>
-          )}
-        </div>
 
         <div
           onMouseEnter={() => mostrarTela('Feminino')}

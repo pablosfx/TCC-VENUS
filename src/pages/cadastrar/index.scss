@@ -1,16 +1,44 @@
 .area-cadastro{
-
+    display: flex;
+    justify-content: center ;
+    padding: 10%;
+}
 .cadastro{
+   
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     align-items: center;
-    .input-cadastro{
-
+    background-color: #ffff;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px
+    ;
+    .input-cadastro input {
         display: flex;
         flex-direction: column;
+        border: 1px solid black;
+        padding: 20px 60px 20px 8px;
+        font-size:15px;
+        margin: 40px;
+        border-radius: 6px;
+        text-align: start ;
+        font-size: 15px;
+        
+        
 
     }
-}
-
+    .criar  {
+        padding: 15px 40px;
+        background-color: #8c20ff;
+        color: #ffff;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .titulo-cadastro{
+        font-size: 25px;
+        text-align: center;
+    }
+     
+    
+    
 }
