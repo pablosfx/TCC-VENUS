@@ -39,7 +39,8 @@ export default function TooltipCategorias () {
               <li><Link>Calças</Link></li>
               <li><Link>Bermudas</Link></li>
               <li><Link>Blusas</Link></li>
-              <li><Link>Regatas</Link></li></div>
+              <li><Link>Regatas</Link></li>
+              </div>
 
             <div className='linha3'>
               <li className='Tcategoria' > <Link>Acessorios</Link></li>

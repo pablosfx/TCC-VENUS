@@ -5,6 +5,7 @@ import App from './pages/app/index';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
 import Cadastrar from './pages/cadastrar'
+import {} from 'swiper/element/bundle'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

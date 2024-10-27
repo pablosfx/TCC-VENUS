@@ -43,4 +43,118 @@ width: 180px;
     margin-left: 200px;
 }
 }
-}
+ .Promocoes-geral {
+    display: flex;
+    background-color: #ececec;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 50px;
+   
+    .nike-promoção{
+        width: 1000px;
+        height: 200px;
+    }
+    .botao-verMais{
+      width: 200px;
+      height: 50px;
+      border: none;
+      background-color: #000000;
+      color: #ffffff;
+      font-weight: 800;
+      margin: 50px 61.9px;
+      cursor: pointer;
+      font-size: 25px;
+      border-radius: 8px;
+      
+    }
+
+ }
+ .Promocoes-demo{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center; 
+ background-color: #ffff;
+ margin: 90px 120px;
+ border-radius: 10px;
+   .item-promocao{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 45px;
+  
+   
+   
+   
+   
+.imagem-item-promocao{
+    width: 200px;
+    border-radius: 10px;
+    margin: 20px;
+
+
+ }
+
+ .titulo-item-promocao{
+   font-size:25px;
+   font-weight: 600;
+   margin: 10px;
+
+ }
+ .porcentagem-de-desconto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    
+ }
+ .item-Ver{
+ border: none;
+ cursor: pointer;
+ background-color: #8c20ff;
+
+ color: #ffffff;
+ height: 30px;
+ font-size: 20px;
+ font-weight: 700;
+ padding: 20px 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 5px;
+
+ }
+ 
+ }
+ 
+
+
+   
+
+   } 
+ .carrosel img {
+  
+  border-radius: 100px;
+  display: flex;
+  position: relative;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .imagem-carrosel{
+    width: 100%;
+    height: auto;
+  };
+
+  .nome-esporte-carrosel{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    z-index: 10; 
+  }
+ }
+
+ }

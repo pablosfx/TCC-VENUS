@@ -3,8 +3,10 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import TooltipCategorias from '../../components/barra-de-categorias';
-
-
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { Swiper,SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from "swiper/modules"
 
 export default function App() {
 
@@ -79,8 +81,90 @@ export default function App() {
           )}
         </div>
       </div>
+     <div className='Promocoes-geral'>
+     
+      <img className='nike-promoção' src="/assets/images/Nike foto.png" alt="" />
+      <button className='botao-verMais'>Ver mais</button>
+     </div>
     
-    
+     <div className='Promocoes-demo'>
+      <div className='item-promocao'>
+          <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
+          <p className='titulo-item-promocao'>Nike no estilo </p>
+          <div className='porcentagem-de-desconto'>
+          <p>até</p>
+          <p className='titulo-item-promocao'>60%</p>
+          </div>
+          <button className='item-Ver'>Ver</button>
+     </div>
+     <div className='item-promocao'>
+          <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
+          <p className='titulo-item-promocao'>Nike no estilo </p>
+          <div className='porcentagem-de-desconto'>
+          <p>até</p>
+          <p className='titulo-item-promocao'>60%</p>
+          </div>
+          <button className='item-Ver'>Ver</button>
+     </div>
+     <div className='item-promocao'>
+          <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
+          <p className='titulo-item-promocao'>Nike no estilo </p>
+          <div className='porcentagem-de-desconto'>
+          <p>até</p>
+          <p className='titulo-item-promocao'>60%</p>
+          </div>
+          <button className='item-Ver'>Ver</button>
+     </div>
+</div>
+      <div className='carrosel'>
+      <Swiper
+      modules={[Autoplay, Pagination, Navigation]}
+      spaceBetween={50}
+      slidesPerView={3}
+      autoplay={{ delay: 3000 }}
+      pagination={{ clickable: true }}
+      navigation
+      loop={true}
+      className="carousel"
+    >
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/futebol.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Futebol</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/basquete.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Basquete</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/volei.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Volei</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/natacao.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Natação</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/futsal.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Futsal</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/skate.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Skate</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/musculamento.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Musculação</h1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/corrida.png" alt="" />
+              <h1 className='nome-esporte-carrosel'>Corrida</h1>
+            </SwiperSlide>
+            
+              
+
+
+          </Swiper>
+      </div>
     </div>
   );
 }
