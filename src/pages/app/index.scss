@@ -1,160 +1,266 @@
-body{
-background-color: #D9D9D9;
-
-.cabecalho{
-background-color: #6300cc;
-display: flex;
-align-items: center;
-height: 80px;
-
-
-.continuar{
-  width: 200px;
-  height: 58px;
-  font-size: 20px;
-  background-color: #8c20ff;
-  color: #ffff;
-  border-radius: 3px;
-  border: none;
+/* Definição da unidade base */
+html {
+  font-size: 16px; /* 1 rem = 16px */
 }
 
-.logo{
-width: 180px;
+body {
+  background-color: #D9D9D9;
 }
-.pesquisa{
 
-    border: none;
-    border-radius: 10px;
-    height:53px ;
-    width: 700px;
-   margin: 25px;
-   font-size:20px;
-   padding-left: 35px;
-    
-}
-.carrinho{
-    width: 40px;
-    margin-left: 7.5px;
-    margin-right: 15px
-}
-.usuario{
-    width: 30px;
-    margin-right: 7.5px;
-    margin-left: 200px;
-}
-}
- .Promocoes-geral {
-    display: flex;
-    background-color: #ececec;
-    justify-content: start;
-    align-items: center;
-    margin-bottom: 50px;
-   
-    .nike-promoção{
-        width: 1000px;
-        height: 200px;
-    }
-    .botao-verMais{
-      width: 200px;
-      height: 50px;
-      border: none;
-      background-color: #000000;
-      color: #ffffff;
-      font-weight: 800;
-      margin: 50px 61.9px;
-      cursor: pointer;
-      font-size: 25px;
-      border-radius: 8px;
-      
-    }
-
- }
- .Promocoes-demo{
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: center; 
- background-color: #ffff;
- margin: 90px 120px;
- border-radius: 10px;
-   .item-promocao{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 45px;
-  
-   
-   
-   
-   
-.imagem-item-promocao{
-    width: 200px;
-    border-radius: 10px;
-    margin: 20px;
-
-
- }
-
- .titulo-item-promocao{
-   font-size:25px;
-   font-weight: 600;
-   margin: 10px;
-
- }
- .porcentagem-de-desconto{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 40px;
-    
- }
- .item-Ver{
- border: none;
- cursor: pointer;
- background-color: #8c20ff;
-
- color: #ffffff;
- height: 30px;
- font-size: 20px;
- font-weight: 700;
- padding: 20px 50px;
- display: flex;
- align-items: center;
- justify-content: center;
- border-radius: 5px;
-
- }
- 
- }
- 
-
-
-   
-
-   } 
- .carrosel img {
-  
-  border-radius: 100px;
+.cabecalho {
+  background-color: #6300cc;
   display: flex;
-  position: relative;
-  position: relative;
+  align-items: center;
+  height: 5rem;
+
+  .continuar {
+    width: 12.5rem;
+    height: 3.625rem;
+    font-size: 1.25rem;
+    background-color: #8c20ff;
+    color: #ffff;
+    border-radius: 0.1875rem;
+    border: none;
+  }
+
+  .logo {
+    width: 11.25rem;
+  }
+
+  .pesquisa {
+    border: none;
+    border-radius: 0.625rem;
+    height: 3.3125rem;
+    width: 43.75rem;
+    margin: 1.5625rem;
+    font-size: 1.25rem;
+    padding-left: 2.1875rem;
+  }
+
+  .carrinho {
+    width: 2.5rem;
+    margin-left: 0.46875rem;
+    margin-right: 0.9375rem;
+  }
+
+  .usuario {
+    width: 1.875rem;
+    margin-right: 0.46875rem;
+    margin-left: 12.5rem;
+  }
+}
+
+.Promocoes-geral {
+  display: flex;
+  background-color: #ececec;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 3.125rem;
+
+  .nike-promoção {
+    width: 62.5rem;
+    height: 12.5rem;
+  }
+
+  .botao-verMais {
+    width: 12.5rem;
+    height: 3.125rem;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 800;
+    margin: 3.125rem 3.86875rem;
+    cursor: pointer;
+    font-size: 1.5625rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.Promocoes-demo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  margin: 5.625rem 7.5rem;
+  border-radius: 0.625rem;
+
+  .item-promocao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.8125rem;
+
+    .imagem-item-promocao {
+      width: 12.5rem;
+      border-radius: 0.625rem;
+      margin: 1.25rem;
+    }
+
+    .titulo-item-promocao {
+      font-size: 1.5625rem;
+      font-weight: 600;
+      margin: 0.625rem;
+    }
+
+    .porcentagem-de-desconto {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .item-Ver {
+      border: none;
+      cursor: pointer;
+      background-color: #8c20ff;
+      color: #ffffff;
+      height: 1.875rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 1.25rem 3.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.3125rem;
+    }
+  }
+}
+
+.carrosel img {
+  border-radius: 6.25rem;
+  display: flex;
   width: 100%;
   height: 100%;
-  .imagem-carrosel{
-    width: 100%;
+  margin: 3.125rem 0;
+
+  .imagem-carrosel {
+    width: 10%;
     height: auto;
-  };
-
-  .nome-esporte-carrosel{
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
-    z-index: 10; 
   }
- }
+}
 
- }
+.produto {
+  display: flex;
+  justify-content: center;
+}
+
+.card-produto {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 11rem; // Ajuste a largura para 11rem (176px)
+  padding: 1rem; // Ajuste o padding para 1rem (16px)
+  border-radius: 0.625rem;
+
+
+
+  .foto-produto {
+    width: 11.875rem;
+    align-self: center;
+  }
+
+  .nome-produto {
+    align-self: flex-start;
+    font-size: 1.0625rem;
+    margin: 1.25rem 0;
+  }
+
+  .preco-total {
+    font-size: 0.625rem;
+    margin: 0;
+    text-decoration: line-through;
+  }
+
+  .preco-final {
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 0.625rem;
+  }
+
+  p.frete {
+    margin: 1.25rem 3.125rem 0;
+  }
+}
+
+/* Ajustes para resoluções de tela */
+
+/* Smartphones (menores que 768px) */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    .pesquisa {
+      width: 90%;
+      font-size: 1rem;
+    }
+  }
+
+  .Promocoes-geral {
+    flex-direction: column;
+    align-items: center;
+
+    .nike-promoção {
+      width: 90%;
+      height: auto;
+    }
+  }
+
+  .Promocoes-demo {
+    margin: 2rem 1rem;
+    flex-direction: column;
+
+    .item-promocao {
+      padding: 1rem;
+    }
+  }
+
+  .card-produto {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
+/* Tablets (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cabecalho .pesquisa {
+    width: 80%;
+  }
+
+  .Promocoes-geral .nike-promoção {
+    width: 80%;
+  }
+
+  .card-produto {
+    width: 80%;
+  }
+}
+
+/* Desktop médio (1024px a 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .cabecalho .pesquisa {
+    width: 55%;
+  }
+
+  .Promocoes-geral .nike-promoção {
+    width: 80%;
+  }
+
+  .card-produto {
+    width: 15%;
+  }
+}
+
+/* Desktop grande (1440px e acima) */
+@media (min-width: 1440px) {
+  .cabecalho .pesquisa {
+    width: 60%;
+  }
+
+  .Promocoes-geral .nike-promoção {
+    width: 60%;
+  }
+
+  .card-produto {
+    width: 50%;
+  }
+}

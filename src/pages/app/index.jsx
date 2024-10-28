@@ -129,35 +129,39 @@ export default function App() {
     >
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/futebol.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Futebol</h1>
+             
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/basquete.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Basquete</h1>
+              
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/volei.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Volei</h1>
+             
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/natacao.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Natação</h1>
+              
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/futsal.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Futsal</h1>
+              
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/skate.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Skate</h1>
+              
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/musculamento.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Musculação</h1>
+             
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/corrida.png" alt="" />
-              <h1 className='nome-esporte-carrosel'>Corrida</h1>
+              
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className='imagem-carrosel' src="/assets/images/handebol.png" alt="" />
+              
             </SwiperSlide>
             
               
@@ -165,6 +169,22 @@ export default function App() {
 
           </Swiper>
       </div>
+
+
+       <div className='produto '>
+          <div className='card-produto'>
+            <img className='foto-produto' src="/assets/images/Nike no estilo.png" alt="" />
+            <p className='nome-produto'>meu cu ta doendo socorro eu vou morrer</p>
+            <div className='precos-produto'>
+             <p className='preco-total'>R$ 800.00</p>
+             <p className='preco-final'>R$ 679.99</p>
+             <p className='frete'>frete gratis</p>
+
+          </div>
+          </div>
+
+
+       </div>
     </div>
   );
 }
