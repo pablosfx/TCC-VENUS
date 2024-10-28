@@ -1,76 +1,74 @@
-import { useEffect, useState } from 'react';
-import './index.scss';
-import axios from 'axios';
+import { useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
+import "./index.scss";
+import { Link } from "react-router-dom";
 
-export default function Consultar() {
-    const [cadastrar, setCadastrar] = useState([]);
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    const [nomecliente, setNomeCliente] = useState('');
-    const [telefone, setTelefone] = useState('');
+const Login = () => {
+    const [email, setemail] = useState("");
+    const [Telefone, settelefone] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-    async function buscar() {
-        const url = 'http://localhost:5010/clientes';
-        try {
-            let resp = await axios.get(url);
-            setCadastrar(resp.data);
-        } catch (error) {
-            console.error("Erro ao buscar dados:", error);
-        }
-    }
-
-    useEffect(() => {
-        buscar();
-    }, []);
-
-    const adicionarCliente = async () => {
-        const url = 'http://localhost:5010/clientes';
-        const novoCliente = { email, senha, nomecliente, telefone };
-        try {
-            await axios.post(url, novoCliente);
-            setCadastrar([...cadastrar, novoCliente]);
-            
-            setEmail('');
-            setSenha('');
-            setNomeCliente('');
-            setTelefone('');
-            alert('Cliente adicionado com sucesso!');
-
-        } catch (error) {
-            console.error("Erro ao adicionar cliente:", error);
-        }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("Dados de Login:", { username, password });
     };
 
     return (
-        <div className='area-cadastro'>
-            
+        <div className="outer-container">
+            <div className="container">
+                <form onSubmit={handleSubmit}>
+                    <div className="primeira">
+                        <h1>Acesse o sistema</h1>   
+                        <div className="input-field">
+                            <input
+                                type="text"
+                                placeholder="Nome"
+                                required
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                            />
+                        </div>
+                        <div className="input-field">
+                            <input
+                                type="text"
+                                placeholder="Telefone"
+                                required
+                                value={Telefone}
+                                onChange={(e) => settelefone(e.target.value)}
+                            />
+                            
+                        </div>
+                        <div className="input-field">
+                            <input
+                                type="text"
+                                placeholder="E-mail"
+                                required
+                                value={email}
+                                onChange={(e) => email(e.target.value)}
+                            />
+                            <FaUser className="icon" />
+                        </div>
+                        <div className="input-field">
+                            <input
+                                type="password"
+                                placeholder="Senha"
+                                required
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <FaLock className="icon" />
+                        </div>
+                        <button  className="butao"  type="submit">Registrar-se</button>
+                        <div className="signup-link">
 
-            <div className='cadastro'>
-            <h1 className='titulo-cadastro'>Insira suas Informações  para criar sua conta</h1>
-                <div className='input-cadastro'>
-                <input className='email' type="text" placeholder="Email:" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input className='senha' type="password" placeholder="Senha:" value={senha} onChange={(e) => setSenha(e.target.value)} />
-                <input className='nome-do-usuario-C' type="text" placeholder="Nome:" value={nomecliente} onChange={(e) => setNomeCliente(e.target.value)} />
-                <input className='telefone' type="text" placeholder="Telefone:" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
-                </div>
-                <button  className='criar' onClick={adicionarCliente}>Criar </button>
+
+                        </div>
+                    </div>
+                </form>
             </div>
-
-            <table>
-
-
-
-                <tbody>
-                    {Array.isArray(cadastrar) && cadastrar.map(item => (
-                        <tr key={item.email}>
-                            <td>{item.email}</td>
-                            <td>{item.senha}</td>
-                            <td>{item.nomecliente}</td>
-                            <td>{item.telefone}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
         </div>
     );
-}
+};
+
+export default Login;

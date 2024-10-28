@@ -1,42 +1,59 @@
-import { useState } from 'react';
-import './index.scss'
-import axios from 'axios';
+import { useState } from "react";
+import "./index.scss";
+import { FaUser, FaLock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-export default function Login  (){
+const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-const [senha,setsenha] = useState('')
-const [usuario,setusuario ] = useState('')
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Dados de Login:", { username, password });
+  };
 
-    async function salvar() {
-        const id = {
-            "usuario" :usuario,
-            "senha" : senha
-        }
+  return (
+    <div className="outer-container">
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <div className="primeira">
+            <h1>Bem-Vindo!!!</h1>
+            <div className="input-field">
+              <input
+                type="text"
+                placeholder="E-mail"
+                required
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <FaUser className="icon" />
+            </div>
+            <div className="input-field">
+              <input
+                type="password"
+                placeholder="Senha"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <FaLock className="icon" />
+            </div>
 
-        const url = 'http://localhost:5010/usuario';
-        let resp = await axios.post(url, id);
-
-        alert('usuario adicionado. Id: ' + resp.data.novoId);
-    }
-
-
-
-
-    return(
-        <div className="login">
-            <div className='cont'>
-            <div className="cont1">
-            <img src="/assets/images/logo.svg" alt="" />
-            <h1>Seja Bem-Vindo!</h1>
-            <p>Você esta  prestes a entrar  em modo adimin!</p></div>
-             <div className='cont2'>
-                <h1>Login Admin</h1>
-            <input value={usuario} onChange={e =>setusuario(e.target.value)}   type="text" placeholder="Usuario:" />
-            <input  value={senha} onChange={e =>setsenha(e.target.value)}    type="text" placeholder="Senha:" />
-            <button onClick={salvar} className='continuar'>Continuar</button>
-           
+            <div className="recall-forget">
+              <a href="#">Esqueceu sua senha?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div className="signup-link">
+              <p>
+                Não tem uma conta?   <Link to={'/cadastrar'}> <a href="#">Registrar</a></Link>
+              </p>
+              
             </div>
           </div>
-        </div>
-    )
-}
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Login;

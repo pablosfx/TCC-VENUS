@@ -143,45 +143,13 @@ body {
 .produto {
   display: flex;
   justify-content: center;
+  background-color: #ffff;
+   .produto h1{
+    
+   }
 }
 
-.card-produto {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  width: 11rem; // Ajuste a largura para 11rem (176px)
-  padding: 1rem; // Ajuste o padding para 1rem (16px)
-  border-radius: 0.625rem;
 
-
-
-  .foto-produto {
-    width: 11.875rem;
-    align-self: center;
-  }
-
-  .nome-produto {
-    align-self: flex-start;
-    font-size: 1.0625rem;
-    margin: 1.25rem 0;
-  }
-
-  .preco-total {
-    font-size: 0.625rem;
-    margin: 0;
-    text-decoration: line-through;
-  }
-
-  .preco-final {
-    font-weight: 700;
-    align-self: flex-start;
-    margin-top: 0.625rem;
-  }
-
-  p.frete {
-    margin: 1.25rem 3.125rem 0;
-  }
-}
 
 /* Ajustes para resoluções de tela */
 
@@ -214,10 +182,7 @@ body {
     }
   }
 
-  .card-produto {
-    width: 90%;
-    padding: 1rem;
-  }
+ 
 }
 
 /* Tablets (768px a 1024px) */
@@ -230,9 +195,7 @@ body {
     width: 80%;
   }
 
-  .card-produto {
-    width: 80%;
-  }
+  
 }
 
 /* Desktop médio (1024px a 1440px) */
@@ -245,9 +208,7 @@ body {
     width: 80%;
   }
 
-  .card-produto {
-    width: 15%;
-  }
+ 
 }
 
 /* Desktop grande (1440px e acima) */
@@ -260,7 +221,5 @@ body {
     width: 60%;
   }
 
-  .card-produto {
-    width: 50%;
-  }
+  
 }

@@ -1,47 +1,178 @@
-.area-cadastro{
-    display: flex;
-    justify-content: center ;
-    padding: 10%;
-}
-.cadastro{
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffff;
-    width: 30%;
-    padding: 10px;
-    border-radius: 20px
-    ;
-    .input-cadastro input {
+
+body {
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        width: 450px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+      }
+      
+      
+      .outer-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        background-color: #8c20ff;  
+          }
+      
+    
+      .primeira {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
-        padding: 20px 60px 20px 8px;
-        font-size:15px;
-        margin: 40px;
-        border-radius: 6px;
-        text-align: start ;
-        font-size: 15px;
-        
-        
-
-    }
-    .criar {
-        padding: 0.9375rem 2.5rem; /* 15px -> 0.9375rem, 40px -> 2.5rem */
-        background-color: #8c20ff;
+        align-items: center;
+      }
+      
+      .container h1 {
+        font-size: 30px;
         color: #ffff;
-        font-size: 1.25rem; /* 20px -> 1.25rem */
-        font-weight: 600;
+      }
+      
+      .input-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin: 20px auto;
+      }
+   
+      
+      .input-field input {
+        width: 100%;
+        gap: 10px;
+        background: transparent;
+        outline: none;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 40px;
+        font-size: 16px;
+        color: #fff;
+        padding: 20px 45px 20px 25px;
+      }
+      
+      .input-field input::placeholder {
+        color: #fff;
+      }
+      
+      .input-field .icon {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #fff;
+      }
+      
+      .recall-forget {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14.5px;
+        margin: -15px 0 15px;
+      }
+      
+      .recall-forget a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .recall-forget a:hover {
+        text-decoration: underline;
+      }
+      
+      .container button {
+        width: 100%;
+        height: 45px;
+        margin-top: 30px;
+        background: #fff;
         border: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-    }
-    
-    .titulo-cadastro{
-        font-size: 25px;
+        font-size: 16px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .signup-link {
+        font-size: 14.5px;
         text-align: center;
+        margin: 20px 0 15px;
+      }
+      
+      .signup-link p a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      .signup-link p a:hover {
+        text-decoration: underline;
+      }
+      
+    .cont1{
+        border: 1px solid black;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+         color: #ffff;
+         align-items: center;
+         padding: 30px;
+        
     }
-     
+    .cont2{
+        border: 1px solid black;
+        flex-direction: column;
+        display: flex;
+        height: 550px;
+        width: 650px;
+        border-radius: 10px;
+        align-items: center;
+        background-color: #000;
+        gap: 30px;
+    
+        h1{
+            color: #8c20ff;
+            font-size: 50px;
+            
+        }
+        input{
+           width: 280px;
+           height: 45px;
+           font-size: 20px;
+           background-color: #000;
+           border-radius: 2px;
+           border-style: none;
+    
+           
+    
+           
+    
+        }
+        .continuar{
+            width: 200px;
+            height: 58px;
+            font-size: 20px;
+            background-color: #8c20ff;
+            color: #ffff;
+            border-radius: 3px;
+            border: none;
+        }
+        .sair{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            background-color: #8c20ff;
+            color: #ffff;
+            border-radius: 1px;
+    
+        }
+        
+    }
     
     
-}
+    
+    

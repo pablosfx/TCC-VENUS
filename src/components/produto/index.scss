@@ -1,0 +1,62 @@
+.card-produto {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 11rem; // Ajuste a largura para 11rem (176px)
+    padding: 1rem; // Ajuste o padding para 1rem (16px)
+    border-radius: 0.625rem;
+  
+  
+  
+    .foto-produto {
+      width: 11.875rem;
+      align-self: center;
+    }
+  
+    .nome-produto {
+      align-self: flex-start;
+      font-size: 1.0625rem;
+      margin: 1.25rem 0;
+    }
+  
+    .preco-total {
+      font-size: 0.625rem;
+      margin: 0;
+      text-decoration: line-through;
+    }
+  
+    .preco-final {
+      font-weight: 700;
+      align-self: flex-start;
+      margin-top: 0.625rem;
+    }
+  
+    p.frete {
+      margin: 1.25rem 3.125rem 0;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .card-produto {
+        width: 85%;
+      }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    .card-produto {
+        width: 85%;
+      }
+  }
+  @media (max-width: 768px) {
+    .card-produto {
+        width:85%;
+        padding: 1rem;
+      }
+
+  }
+  @media (min-width: 1440px) {
+    .card-produto {
+        width: 50%;
+      }
+  }

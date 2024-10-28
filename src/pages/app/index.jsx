@@ -7,6 +7,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { Swiper,SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper/modules"
+import Produtos from '../../components/produto';
+
 
 export default function App() {
 
@@ -24,7 +26,7 @@ export default function App() {
     <div className="cabecalho">
      <img className='logo' src="/assets/images/logo.svg"/>
       <input className='pesquisa' type="text" placeholder='O que você procura?' />
-      <Link to={'/cadastrar'}> <img className='usuario' src="/assets/images/usuario.png"/></Link>
+      <Link to={'/login'}> <img className='usuario' src="/assets/images/usuario.png"/></Link>
       <img className='carrinho' src="/assets/images/carrinho.png"/>
        
     </div>
@@ -172,16 +174,12 @@ export default function App() {
 
 
        <div className='produto '>
-          <div className='card-produto'>
-            <img className='foto-produto' src="/assets/images/Nike no estilo.png" alt="" />
-            <p className='nome-produto'>meu cu ta doendo socorro eu vou morrer</p>
-            <div className='precos-produto'>
-             <p className='preco-total'>R$ 800.00</p>
-             <p className='preco-final'>R$ 679.99</p>
-             <p className='frete'>frete gratis</p>
-
-          </div>
-          </div>
+        <h1>Produtos em destaque</h1>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
 
 
        </div>
