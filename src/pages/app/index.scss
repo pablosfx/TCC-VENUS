@@ -206,15 +206,187 @@ body {
     z-index: 10;
    }
 
-   .rodape{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .logo{
-      
-    }
-   }
+   
+   
 }
+.rodape{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #6300cc;
+  padding: 20px;
+  margin-top: 30px;
+  
+
+  .logo{
+    width: 200px;
+
+  }
+  .ig{
+    width: 30px;
+    border-radius: 10px;
+  }
+  .zap{
+    width: 30px;
+    border-radius: 10px;
+  }
+  .pix{
+    width: 30px;
+    background-color: #ffffff;
+    padding: 10px 45px;
+    border-radius: 10px;
+  }
+  .Links-rdp{
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+
+
+  .Esportes {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    text-decoration: none;
+    gap: 10px;
+  }
+  .Marcas{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    gap: 10px;
+    
+  }
+  
+  
+ 
+
+  
+}
+.Contato{
+  font-size: 20px;
+  color: #ffffff;
+ }
+.forma-de-pagamento{
+  color: #ffffff;
+  font-size: 20px;
+
+}
+.Termos{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.pagamento-rdp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.cmc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap :10px ;
+}
+
+}
+.rodape {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #6300cc;
+  padding: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Permite quebra em telas menores */
+  gap: 20px; /* Espaço entre os elementos */
+}
+
+.rodape .logo {
+  width: 150px; /* Tamanho menor para melhor adaptação */
+}
+
+.rodape .ig,
+.rodape .zap,
+.rodape .pix {
+  width: 30px;
+  border-radius: 10px;
+}
+
+.rodape .Links-rdp {
+  display: flex;
+  gap: 50px;
+  padding: 20px;
+}
+
+.rodape .Links-rdp .Esportes,
+.rodape .Links-rdp .Marcas {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.rodape .Contato,
+.rodape .forma-de-pagamento,
+.rodape .Termos {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center; /* Centraliza o texto */
+}
+
+.rodape .pagamento-rdp,
+.rodape .cmc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .rodape {
+    flex-direction: column; /* Organiza em coluna em telas menores */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 15px;
+  }
+  
+  .rodape .Links-rdp {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Ajusta o espaço entre as seções */
+  }
+
+  .rodape .logo {
+    width: 120px; /* Reduz a logo em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape .Links-rdp {
+    gap: 10px;
+  }
+
+  .rodape .Contato,
+  .rodape .forma-de-pagamento,
+  .rodape .Termos {
+    font-size: 16px; /* Reduz o tamanho da fonte para telas muito pequenas */
+  }
+
+  .rodape .logo {
+    width: 100px;
+  }
+}
+
+
+
+
 
 @media (max-width: 600px) {
   .container {

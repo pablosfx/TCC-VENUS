@@ -182,31 +182,33 @@ export default function App() {
 
         <div className='rodape'>
 
-          <img className='logo' src="/assets/images/logo.svg" alt="" />
+          <div className='cmc'><img className='logo' src="/assets/images/logo.svg" alt="" />
+          <Link ><p className='Termos'> termos e condições</p></Link></div>
+            <div className='Links-rdp'>
             <div className='Esportes'>
-            <Link>Esportes</Link>
-            <Link>futebol</Link>
-            <Link>basquete</Link>
-            <Link>Corrida</Link>
-            <Link>musculação</Link>
-            <Link>volei</Link>
+            <Link className='Esportes'>Esportes</Link>
+            <Link className='Esportes'>futebol</Link>
+            <Link className='Esportes'>basquete</Link>
+            <Link className='Esportes'>Corrida</Link>
+            <Link className='Esportes'>musculação</Link>
+            <Link className='Esportes'>volei</Link>
             </div>
             <div className='Marcas'>
-            <Link>Marcas</Link>
-            <Link>Nike</Link>
-            <Link>Addidas</Link>
-            <Link>Puma</Link>
-            <Link>Mizuno</Link>
-            <Link>Penalty</Link>
-            </div>
+            <Link className='Marcas' >Marcas</Link>
+            <Link className='Marcas'>Nike</Link>
+            <Link className='Marcas'>Addidas</Link>
+            <Link className='Marcas'>Puma</Link>
+            <Link className='Marcas'>Mizuno</Link>
+            <Link className='Marcas'>Penalty</Link>
+            </div></div>
             <div className='rdp2'>
-            <h1>Contato</h1>
+           
+ <h1 className='Contato'>Contato</h1>
             <img className='zap' src="/assets/images/zap.png" alt="" />
             <img className='ig' src="/assets/images/instagram.png" alt="" />
-
-            <h1>Forma de pagamento</h1>
-            <img className='pix' src="/assets/images/pix.png" alt="" />
-           <Link><p>termos e condições</p></Link>
+           <div className='pagamento-rdp'> <h1 className='forma-de-pagamento'>Forma de pagamento</h1>
+            <img className='pix' src="/assets/images/pix.png" alt="" /></div>
+           
           </div>
 
         </div>
