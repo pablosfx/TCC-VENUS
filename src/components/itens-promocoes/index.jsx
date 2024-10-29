@@ -1,6 +1,8 @@
 import './index.scss';
 
 
-export default function (props) {
-
+export default function ItensPromocoes() {
+    <div className='Itens-promocoes'>
+    
+</div>
 }

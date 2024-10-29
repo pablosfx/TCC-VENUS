@@ -23,14 +23,18 @@
   .tooltip {
     position: absolute;
     background-color: #E2E2E2;
-    top: 100% ;
+    top: 100%;
     display: flex;
+    justify-content: center; 
     gap: 90px;
-    line-height:34px;
-    width: 1200px;
-    left: 0%;
-    padding: 0px 80px;
+    line-height: 34px;
+    width: 95.8vw; 
+    left: 0; 
+    padding: 0px 20px; 
     font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
  
     li{
       list-style: none;

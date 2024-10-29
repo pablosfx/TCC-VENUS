@@ -8,6 +8,7 @@ import 'swiper/css/navigation'
 import { Swiper,SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper/modules"
 import Produtos from '../../components/produto';
+import ItensPromocoes from '../../components/itens-promocoes';
 
 
 export default function App() {
@@ -53,25 +54,6 @@ export default function App() {
           )}
         </div>
 
-        <div
-          onMouseEnter={() => mostrarTela('Acessorios')}
-          onMouseLeave={esconderTela}
-        >
-          <Link to="#">Acessórios</Link>
-          {categoriaVIsivel === 'Acessorios' && (
-            <div className="tooltip">Informações sobre Acessórios</div>
-          )}
-        </div>
-
-        <div
-          onMouseEnter={() => mostrarTela('Equipamentos')}
-          onMouseLeave={esconderTela}
-        >
-          <Link to="#">Equipamentos</Link>
-          {categoriaVIsivel === 'Equipamentos' && (
-            <div className="tooltip">Informações sobre Equipamentos</div>
-          )}
-        </div>
 
         <div
           onMouseEnter={() => mostrarTela('Marcas')}
@@ -90,38 +72,39 @@ export default function App() {
      </div>
     
      <div className='Promocoes-demo'>
-      <div className='item-promocao'>
-          <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
-          <p className='titulo-item-promocao'>Nike no estilo </p>
-          <div className='porcentagem-de-desconto'>
-          <p>até</p>
-          <p className='titulo-item-promocao'>60%</p>
-          </div>
-          <button className='item-Ver'>Ver</button>
-     </div>
      <div className='item-promocao'>
-          <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
-          <p className='titulo-item-promocao'>Nike no estilo </p>
-          <div className='porcentagem-de-desconto'>
-          <p>até</p>
-          <p className='titulo-item-promocao'>60%</p>
-          </div>
-          <button className='item-Ver'>Ver</button>
-     </div>
-     <div className='item-promocao'>
-          <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
-          <p className='titulo-item-promocao'>Nike no estilo </p>
-          <div className='porcentagem-de-desconto'>
-          <p>até</p>
-          <p className='titulo-item-promocao'>60%</p>
-          </div>
-          <button className='item-Ver'>Ver</button>
-     </div>
+    <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
+    <p className='titulo-item-promocao'>Nike no estilo </p>
+    <div className='porcentagem-de-desconto'>
+    <p>até</p>
+    <p className='titulo-item-promocao'>60%</p>
+    </div>
+    <button className='item-Ver'>Ver</button>
+</div>
+<div className='item-promocao'>
+    <img className='imagem-item-promocao' src="/assets/images/Chuteiras nike.png" alt="" />
+    <p className='titulo-item-promocao'>Chuteiras Nike </p>
+    <div className='porcentagem-de-desconto'>
+    <p>até</p>
+    <p className='titulo-item-promocao'>40%</p>
+    </div>
+    <button className='item-Ver'>Ver</button>
+</div>
+<div className='item-promocao'>
+    <img className='imagem-item-promocao' src="/assets/images/Mega ofertas Nike.png" alt="" />
+    <p className='titulo-item-promocao'>Mega ofertas Nike</p>
+    <div className='porcentagem-de-desconto'>
+    <p>até</p>
+    <p className='titulo-item-promocao'>80%</p>
+    </div>
+    <button className='item-Ver'>Ver</button>
+</div>
 </div>
       <div className='carrosel'>
+        <h1 className='escolha-seu-esporte'>Escolha seu esporte</h1>
       <Swiper
       modules={[Autoplay, Pagination, Navigation]}
-      spaceBetween={50}
+      spaceBetween={0}
       slidesPerView={3}
       autoplay={{ delay: 3000 }}
       pagination={{ clickable: true }}
@@ -131,7 +114,7 @@ export default function App() {
     >
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/futebol.png" alt="" />
-             
+                
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/basquete.png" alt="" />
@@ -139,7 +122,7 @@ export default function App() {
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/volei.png" alt="" />
-             
+              
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/natacao.png" alt="" />
@@ -155,7 +138,7 @@ export default function App() {
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/musculamento.png" alt="" />
-             
+              
             </SwiperSlide>
             <SwiperSlide>
               <img className='imagem-carrosel' src="/assets/images/corrida.png" alt="" />
@@ -174,15 +157,59 @@ export default function App() {
 
 
        <div className='produto '>
-        <h1>Produtos em destaque</h1>
+        <h1 className='produtos-em-destaque'>Produtos em destaque</h1>
           <Produtos/>
           <Produtos/>
           <Produtos/>
           <Produtos/>
           <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          <Produtos/>
+          
+          
 
 
        </div>
+
+
+        <div className='rodape'>
+
+          <img className='logo' src="/assets/images/logo.svg" alt="" />
+            <div className='Esportes'>
+            <Link>Esportes</Link>
+            <Link>futebol</Link>
+            <Link>basquete</Link>
+            <Link>Corrida</Link>
+            <Link>musculação</Link>
+            <Link>volei</Link>
+            </div>
+            <div className='Marcas'>
+            <Link>Marcas</Link>
+            <Link>Nike</Link>
+            <Link>Addidas</Link>
+            <Link>Puma</Link>
+            <Link>Mizuno</Link>
+            <Link>Penalty</Link>
+            </div>
+            <div className='rdp2'>
+            <h1>Contato</h1>
+            <img className='zap' src="/assets/images/zap.png" alt="" />
+            <img className='ig' src="/assets/images/instagram.png" alt="" />
+
+            <h1>Forma de pagamento</h1>
+            <img className='pix' src="/assets/images/pix.png" alt="" />
+           <Link><p>termos e condições</p></Link>
+          </div>
+
+        </div>
     </div>
   );
 }

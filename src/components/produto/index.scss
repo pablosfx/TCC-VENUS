@@ -5,7 +5,13 @@
     width: 11rem; // Ajuste a largura para 11rem (176px)
     padding: 1rem; // Ajuste o padding para 1rem (16px)
     border-radius: 0.625rem;
-  
+    &:hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: scale(1.05); // Aumenta o tamanho ligeiramente
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); // Adiciona uma sombra para o efeito de borda
+      border: 1px solid #000000; // Borda ao redor do item ao passar o mouse
+      cursor: pointer;
+    }
   
   
     .foto-produto {
@@ -35,6 +41,7 @@
       margin: 1.25rem 3.125rem 0;
     }
   }
+
 
   @media (min-width: 768px) and (max-width: 1024px) {
 

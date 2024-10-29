@@ -19,7 +19,7 @@ const Login = () => {
             <div className="container">
                 <form onSubmit={handleSubmit}>
                     <div className="primeira">
-                        <h1>Acesse o sistema</h1>   
+                        <div className="cadas">Registrar-se</div>
                         <div className="input-field">
                             <input
                                 type="text"
@@ -37,7 +37,7 @@ const Login = () => {
                                 value={Telefone}
                                 onChange={(e) => settelefone(e.target.value)}
                             />
-                            
+
                         </div>
                         <div className="input-field">
                             <input
@@ -45,7 +45,7 @@ const Login = () => {
                                 placeholder="E-mail"
                                 required
                                 value={email}
-                                onChange={(e) => email(e.target.value)}
+                                onChange={(e) => setemail(e.target.value)} 
                             />
                             <FaUser className="icon" />
                         </div>
@@ -59,7 +59,7 @@ const Login = () => {
                             />
                             <FaLock className="icon" />
                         </div>
-                        <button  className="butao"  type="submit">Registrar-se</button>
+                        <button className="butao" type="submit">Registrar-se</button>
                         <div className="signup-link">
 
 
