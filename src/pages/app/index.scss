@@ -7,48 +7,7 @@ body {
   background-color: #D9D9D9;
 }
 
-.cabecalho {
-  background-color: #6300cc;
-  display: flex;
-  align-items: center;
-  height: 5rem; 
 
-  .continuar {
-    width: 12.5rem;
-    height: 3.625rem;
-    font-size: 1.25rem;
-    background-color: #8c20ff;
-    color: #ffff;
-    border-radius: 0.1875rem;
-    border: none;
-  }
-
-  .logo {
-    width: 11.25rem;
-  }
-
-  .pesquisa {
-    border: none;
-    border-radius: 0.625rem;
-    height: 3.3125rem;
-    width: 43.75rem;
-    margin: 1.5625rem;
-    font-size: 1.25rem;
-    padding-left: 2.1875rem;
-  }
-
-  .carrinho {
-    width: 2.5rem;
-    margin-left: 0.46875rem;
-    margin-right: 0.9375rem;
-  }
-
-  .usuario {
-    width: 1.875rem;
-    margin-right: 0.46875rem;
-    margin-left: 12.5rem;
-  }
-}
 
 .Promocoes-geral {
   display: flex;
@@ -84,15 +43,17 @@ body {
   background-color: #ffff;
   margin: 5.625rem 7.5rem;
   border-radius: 0.625rem;
+  padding: 2rem;
  
 
   .item-promocao {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 2.8125rem;
     width:80%;
-    background-color: #ffffff;
+    
     border-radius: 0.625rem;
     &:hover {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -108,7 +69,7 @@ body {
     }
 
     .titulo-item-promocao {
-      font-size: 1.5625rem;
+      font-size: 1.5620rem; 
       font-weight: 600;
       margin: 0.625rem;
     }
@@ -135,7 +96,7 @@ body {
       border-radius: 0.3125rem;
       &:hover {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        transform: scale(1.05); // Aumenta o tamanho ligeiramente
+        transform: scale(1.1); // Aumenta o tamanho ligeiramente
         
         
       }
@@ -216,12 +177,23 @@ body {
   background-color: #6300cc;
   padding: 20px;
   margin-top: 30px;
+ 
+
+    .Luiz{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 10px;
+    
+    }
   
 
   .logo{
     width: 200px;
 
   }
+
   .ig{
     width: 30px;
     border-radius: 10px;
@@ -313,6 +285,9 @@ body {
 .rodape .ig,
 .rodape .zap,
 .rodape .pix {
+  display: flex;
+
+  gap: 20px;
   width: 30px;
   border-radius: 10px;
 }
@@ -348,6 +323,7 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {

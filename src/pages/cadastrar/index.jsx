@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./index.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 
 const Login = () => {
     const [email, setemail] = useState("");
@@ -13,6 +15,7 @@ const Login = () => {
         event.preventDefault();
         console.log("Dados de Login:", { username, password });
     };
+
 
     return (
         <div className="outer-container">

@@ -1,0 +1,58 @@
+.cabecalho {
+    background-color: #6300cc;
+    display: flex;
+    align-items: center;
+    height: 5rem; 
+    
+    
+    }
+  
+    .logo {
+      width: 11.25rem;
+    }
+  
+    .pesquisa {
+      border: none;
+      border-radius: 0.625rem;
+      height: 3.3125rem;
+      width: 43.75rem;
+      margin: 1.5625rem;
+      font-size: 1.25rem;
+      padding-left: 2.1875rem;
+    }
+  
+    .carrinho {
+      width: 2.5rem;
+      
+    }
+  
+    .usuario {
+      width: 2.875rem;
+      
+    }
+
+    
+@media (max-width: 900px) {
+    .cabecalho {
+    width: 100%
+   
+    }
+   
+  
+    .cabecalho .usuario {
+      margin-left: 0; /* Remove a margem à esquerda do ícone do usuário */
+    }
+  
+    .cabecalho .continuar {
+      width: 100%; /* Botão de continuar ocupa a largura total */
+    }
+  
+    .Promocoes-demo {
+      flex-direction: column; /* Coloca os itens em coluna */
+      margin: 5rem 1rem; /* Reduzindo margem lateral */
+    }
+  
+    .carrosel {
+      margin: 30px 20px; /* Margens menores */
+    }
+  }
