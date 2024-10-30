@@ -1,21 +1,39 @@
 import { useState } from "react";
 import "./index.scss";
 import { FaUser, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
+import axios from 'axios';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [nome, setNome] = useState("");
+  const [senha, setSenha] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Dados de Login:", { username, password });
-  };
+  async function entrar() {
+    const usuario = {
+      "nome": nome,
+      "usuario": senha,
+    };
+    const url = 'YOUR_API_URL_HERE';
+    try {
+      let resp = await axios.post(url, usuario);
+
+      if (resp.data.erro !== undefined) {
+        alert(resp.data.erro);
+      } else {
+        localStorage.setItem('usuario', resp.data.token);
+        navigate('/consulta');
+      }
+    } catch (error) {
+      console.error("Erro ao fazer login", error);
+      alert("Ocorreu um erro. Tente novamente.");
+    }
+  }
 
   return (
     <div className="outer-container">
       <div className="container">
-        <form onSubmit={handleSubmit}>
+        <div>
           <div className="primeira">
             <h1>Bem-Vindo!!!</h1>
             <div className="input-field">
@@ -23,8 +41,8 @@ const Login = () => {
                 type="text"
                 placeholder="E-mail"
                 required
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
               />
               <FaUser className="icon" />
             </div>
@@ -33,8 +51,8 @@ const Login = () => {
                 type="password"
                 placeholder="Senha"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)} 
               />
               <FaLock className="icon" />
             </div>
@@ -42,15 +60,14 @@ const Login = () => {
             <div className="recall-forget">
               <a href="#">Esqueceu sua senha?</a>
             </div>
-            <button type="submit">Login</button>
+            <button type="button" onClick={entrar}>Login</button> {}
             <div className="signup-link">
               <p>
-                Não tem uma conta?   <Link to={'/cadastrar'}> <a href="#">Registrar</a></Link>
+                Não tem uma conta? <Link to='/cadastrar'>Registrar</Link>
               </p>
-              
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

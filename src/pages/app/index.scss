@@ -383,3 +383,25 @@ body {
   }
   
 }
+@media (min-width: 1920px){
+.html{
+  font-size: 20px;
+}
+.Promocoes-demo{
+  width: 90;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  .item-promocao{
+    width: 80%;
+    height: 30rem;
+    gap: 1rem;
+    
+  }
+}
+
+}
