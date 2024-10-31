@@ -13,15 +13,18 @@ export default function Pedido (){
             <div className='pedido'>
             <img src="/assets/images/Nike no estilo.png" alt="" />
             <div className='info-produto'>
-            <h1>Nike no estilo</h1>
-            <p>R$ 600</p>
-            <div className='tamanho'>
-                <h1>Tamanhos:</h1>
-                <input type="radio" />
-                <input type="radio" />
-                <input type="radio" />
-                <input type="radio" />
+                <div className='pedido-1'>
+            <h1 className='nome-do-produto' >Nike no estilo</h1>
+            <p className='valor-do-produto'>R$ 600</p>
+            </div>
 
+            <div className='pedido-2'>
+                <div className='forma-de-pagamento'>
+                 <p>forma de pagamento:</p>
+             <img className='pix-foto' src="/assets/images/pix.png" alt="" />
+             </div>
+                <button class>adicionar ao carrinho</button>
+                
 
             </div>
                 

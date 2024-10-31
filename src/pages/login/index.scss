@@ -1,28 +1,27 @@
 body {
-  margin: 0; /* Remove margens padrão do body */
-
+  margin: 0; 
 }
 
 .container-link {
   color: #fff;
   font-size: 1.5rem;
-  transition: color 0.6s ease, transform 0.6s ease; /* Transição suave para cor e escala */
-  text-decoration: none; /* Remove sublinhado padrão */
-  border-bottom: 2px solid transparent; /* Adiciona um espaço para a animação da borda */
+  transition: color 0.6s ease, transform 0.6s ease; 
+  text-decoration: none; 
+  border-bottom: 2px solid transparent;
 }
 
 .container-link:hover {
-  color: #db4545; /* Cor quando o mouse passa */
-  transform: translateY(-2px); /* Levanta um pouco para dar um efeito de flutuação */
-  border-bottom: 2px solid #db4545; /* Adiciona borda em hover */
+  color: #db4545; 
+  transform: translateY(-2px); 
+  border-bottom: 2px solid #db4545; 
 }
 
 
 .outer-container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;    /* Centraliza verticalmente */
-  height: 100vh;          /* Preenche toda a altura da janela */
+  justify-content: center; 
+  align-items: center;  
+  height: 100vh;        
 }
 
 .container {
@@ -32,13 +31,13 @@ body {
   width: 450px;
   height: auto;
   margin: 30px;
-  background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade aqui */
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 40px;
-  transition: transform 0.3s ease; /* Suaviza a transformação ao passar o mouse */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para destacar o componente */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .primeira {
@@ -134,8 +133,8 @@ body {
   position:absolute;
   z-index: 10;
   top: 0;
-  width: 50px;
+  width: 30px;
   left: 0;
-  margin: 20px;
+  margin: 30px;
 
 }

@@ -1,12 +1,12 @@
 html {
-  font-size: 16px; /* 1 rem = 16px */
+  font-size: 16px;
 }
 
 body {
   background-color: #D9D9D9;
 }
 
-/* Sessão de Promoções Geral */
+
 .Promocoes-geral {
   display: flex;
   background-color: #ececec;
@@ -14,7 +14,7 @@ body {
   align-items: center;
   margin-bottom: 3.125rem;
   gap: 7rem;
-  width: 100%; /* Para ajustar na tela */
+  width: 100%;
   max-width: 119rem;
 }
 
@@ -44,7 +44,7 @@ body {
   align-items: center;
 }
 
-/* Sessão de Promoções Demo */
+
 .Promocoes-demo {
   display: flex;
   justify-content: center;
@@ -153,14 +153,14 @@ body {
 }
 
 .imagem-container:hover .imagem-esporte {
-  transform: scale(1.1);
+  transform: scale(1.0);
 }
 
 .imagem-container:hover .texto-sobre-imagem {
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -80%);
 }
 
-/* Produtos em Destaque */
+
 .produto {
   display: flex;
   flex-wrap: wrap;
@@ -179,7 +179,7 @@ body {
   top: 7%;
 }
 
-/* Rodapé */
+
 .rodape .Contato,
 .rodape .forma-de-pagamento,
 .rodape .Termos {
@@ -224,7 +224,7 @@ body {
 }
 }
 
-/* Responsividade para telas menores */
+
 @media (max-width: 1024px) {
   .Promocoes-geral {
     flex-direction: column;
@@ -308,7 +308,7 @@ body {
 }
 @media (max-width: 768px) {
  
-  /* Sessão de Promoções Geral */
+  
   .Promocoes-geral {
     flex-direction: column;
     gap: 2rem;
@@ -330,14 +330,14 @@ body {
     flex-direction: column;
   }
   
-  /* Produtos em Destaque */
+ 
   .produto {
     flex-direction: column;
     width: 100%;
     padding: 2rem 1rem;
   }
 
-  /* Rodapé */
+
   .rodape {
     padding: 1rem;
     text-align: center;

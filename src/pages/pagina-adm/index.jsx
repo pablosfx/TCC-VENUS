@@ -7,13 +7,18 @@ import { useHistory } from 'react-router-dom'
 
 export default function paginaadm() {
 
-    return (
+  return (
+    <div className='cabecalho '>
 
-      <div className='ADM'>
-       
+      <Link to={'/'}><img className='logo' src="/assets/images/logo.svg" /></Link>
+      <div className='adm'>
+       <h1>ADM</h1>
       </div>
-    );
-  }
-  
-  
-  
+
+    </div>
+
+
+  );
+}
+
+

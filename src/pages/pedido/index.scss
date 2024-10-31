@@ -1,0 +1,69 @@
+.pedido{
+    display: flex;
+    background-color: #fff;
+   
+}
+.pedido img{
+    width: 50rem;
+    border-radius: 40px;
+}
+.info-produto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 4rem;
+
+    border: 1px black solid;
+    .pix-foto{
+    width: 2rem;
+       
+}
+.pedido-1{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+
+}
+.pedido-1 .valor-do-produto{
+    font-size: 25px;
+    font-weight: 500 ;
+}
+}
+.pedido-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    .forma-de-pagamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    gap: 1rem;
+
+    }
+    .forma-de-pagamento p {
+        font-size: 16px;
+
+    }
+
+}
+.tamanhos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fl
+.forma-de-pagamento button {
+
+ border: none;
+}ex-direction: row;
+}
+
+.nome-do-produto{
+
+}

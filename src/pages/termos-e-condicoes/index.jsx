@@ -5,7 +5,7 @@ export default function TermosECondicoes () {
 
 
     return(
-        <div className='Termos'>
+        <div className='Termos-cont'>
              <Cabecalho/> 
              <h1 className='t1'>Termos  e Condições</h1>
             <div className='Termos-condicoes'>

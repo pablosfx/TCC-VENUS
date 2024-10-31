@@ -26,7 +26,7 @@ const Login = () => {
           } else {
               localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario));
               localStorage.setItem('TOKEN', resp.data.token);
-              navigate('/pagina-adm'); // Redireciona para a página ./app
+              navigate('/pagina-adm'); 
           }
       } catch (error) {
           toast.error('Erro ao fazer login');
@@ -36,10 +36,11 @@ const Login = () => {
 
   return (
     <div className="outer-container">
-       <Link to={'/'}> <img className="voltar" src="/assets/images/voltar.png" alt="" /></Link>
-      <div className="container">
+        <div className="container">
         <form onSubmit={entrar}>
           <div className="primeira">
+          <Link to={'/'}> <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="" /></Link>
+
             <h1>Login-ADM</h1>
             <div className="input-field">
               <input

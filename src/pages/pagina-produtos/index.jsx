@@ -26,26 +26,7 @@ export default function PaginaProdutos () {
             <Produto />
             <Produto />
             <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-        
+            
            </div>
            <Rodape />
 
