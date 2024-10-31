@@ -1,21 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import "./index.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-
+import "./index.scss";
 
 const Login = () => {
-    const [email, setemail] = useState("");
-    const [Telefone, settelefone] = useState("");
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [token, setToken] = useState(null);
+    const [email, setEmail] = useState("");
+    const [Telefone, setTelefone] = useState("");
+    const [nome, setNome] = useState("");
+    const [senha, setSenha] = useState("");
+    const navigate = useNavigate();
+    const { id } = useParams();
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("Dados de Login:", { username, password });
+    const consultar = async () => {
+        const paramCorpo = {
+            "email": email,
+            "telefone": Telefone,
+            "nome": nome,
+            "senha": senha,
+        };
+        if (id === undefined) {
+            const url = `http://localhost:5010/clientes?x-access-token=${token}`;
+            await axios.post(url, paramCorpo);
+        } else {
+            const url = `http://localhost:5010/clientes/${id}?x-access-token=${token}`;
+            let resp = await axios.get(url);
+            let dados = resp.data;
+
+            setEmail(dados.email);
+            setTelefone(dados.telefone);
+            setNome(dados.nome);
+            setSenha(dados.senha);
+        }
     };
 
+    useEffect(() => {
+        const usu = localStorage.getItem('USUARIO');
+        setToken(usu);
+        if (usu === undefined) {
+            navigate('/');
+        }
+        if (id) {
+        consultar();
+        }
+    }, [id, navigate]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
 
     return (
         <div className="outer-container">
@@ -29,8 +62,8 @@ const Login = () => {
                                 type="text"
                                 placeholder="Nome"
                                 required
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
+                                value={nome}
+                                onChange={(e) => setNome(e.target.value)}
                             />
                         </div>
                         <div className="input-field">
@@ -39,9 +72,8 @@ const Login = () => {
                                 placeholder="Telefone"
                                 required
                                 value={Telefone}
-                                onChange={(e) => settelefone(e.target.value)}
+                                onChange={(e) => setTelefone(e.target.value)}
                             />
-
                         </div>
                         <div className="input-field">
                             <input
@@ -49,25 +81,22 @@ const Login = () => {
                                 placeholder="E-mail"
                                 required
                                 value={email}
-                                onChange={(e) => setemail(e.target.value)} 
+                                onChange={(e) => setEmail(e.target.value)} 
                             />
                             <FaUser className="icon" />
                         </div>
                         <div className="input-field">
                             <input
-                                type="password"
+                                type="password" // Corrigido de "senha" para "password"
                                 placeholder="Senha"
                                 required
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                value={senha}
+                                onChange={(e) => setSenha(e.target.value)}
                             />
                             <FaLock className="icon" />
                         </div>
-                        <button className="butao" type="submit">Registrar-se</button>
-                        <div className="signup-link">
-
-
-                        </div>
+                        <button  className="butao" type="submit">Registrar-se</button>
+                        <div className="signup-link"></div>
                     </div>
                 </form>
             </div>

@@ -187,18 +187,79 @@ margin: 50px;
   margin: 0 100px;
 }
 
-.produto .produtos-em-destaque {
-  position: absolute;
-  top: 7.5%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2rem;
-  z-index: 10;
+.rodape .Contato,
+.rodape .forma-de-pagamento,
+.rodape .Termos {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center; /* Centraliza o texto */
+}
+
+.rodape .pagamento-rdp,
+.rodape .cmc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .rodape {
+    flex-direction: column; /* Organiza em coluna em telas menores */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 15px;
+  }
+  
+  .rodape .Links-rdp {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Ajusta o espaço entre as seções */
+  }
+
+  .rodape .logo {
+    width: 120px; /* Reduz a logo em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape .Links-rdp {
+    gap: 10px;
+  }
+
+  .rodape .Contato,
+  .rodape .forma-de-pagamento,
+  .rodape .Termos {
+    font-size: 16px; /* Reduz o tamanho da fonte para telas muito pequenas */
+  }
+
+  .rodape .logo {
+    width: 100px;
+  }
 }
 
 
 
 
 
+@media (max-width: 600px) {
+  .container {
+      width: 90%; 
+      padding: 10px; 
+  }
 
+  .container h1 {
+      font-size: 20px; 
+  }
 
+  .input-field input {
+      padding: 10px 20px; 
+  }
+
+  .container button {
+      height: 40px; 
+  }
+  
+}

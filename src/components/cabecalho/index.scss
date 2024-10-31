@@ -7,88 +7,60 @@
 
 /* Configurações do cabeçalho */
 .cabecalho {
-  background-color: #6300cc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 8rem; /* Tamanho maior para 1920x1080 */
-  padding: 0 2rem;
-  gap: 2rem;
-  width: 119rem;
-}
-
-.cabecalho .logo {
-  width: 12rem; /* Aumenta o tamanho da logo */
-}
-
-.cabecalho .pesquisa {
-  border: none;
-  border-radius: 0.625rem;
-  height: 4.5rem;
-  width: 60rem; /* Ajusta para telas grandes */
-  font-size: 1.5rem;
-  padding-left: 1.5rem;
-}
-.cabecalho .icones,
-.cabecalho .carrinho,
-.cabecalho .usuario {
-  width: 3rem; /* Aumenta o tamanho dos ícones */
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  
-
-}
-.cabecalho .icones{
-    margin:0 16rem ;
-  }
-/* Layout responsivo */
-@media (max-width: 900px) {
-  .cabecalho {
-    flex-wrap: wrap;
-    padding: 0.5rem;
-    height: auto;
-  }
-
-  .cabecalho .pesquisa {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  .cabecalho .logo,
-  .cabecalho .carrinho,
-  .cabecalho .usuario {
-    width: 2.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .cabecalho {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    height: auto;
-  }
-
-  .cabecalho .logo {
-    width: 5rem;
-  }
-
-  .cabecalho .pesquisa {
-    font-size: 1rem;
-    padding-left: 1rem;
-    width: 18rem;
-  }
-
-  .cabecalho .carrinho,
-  .cabecalho .usuario {
-    width: 1.5rem;
-  }
-
-  .cabecalho .icones {
+    background-color: #6300cc;
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    height: 5rem; 
+    
+    
+    }
+  
+    .logo {
+      width: 11.25rem;
+    }
+  
+    .pesquisa {
+      border: none;
+      border-radius: 0.625rem;
+      height: 3.3125rem;
+      width: 43.75rem;
+      margin: 1.5625rem;
+      font-size: 1.25rem;
+      padding-left: 2.1875rem;
+    }
+  
+    .carrinho {
+      width: 2.5rem;
+      
+    }
+  
+    .usuario {
+      width: 2.875rem;
+      
+    }
+
+    
+@media (max-width: 900px) {
+    .cabecalho {
+    width: 100%
+   
+    }
+   
+  
+    .cabecalho .usuario {
+      margin-left: 0; /* Remove a margem à esquerda do ícone do usuário */
+    }
+  
+    .cabecalho .continuar {
+      width: 100%; 
+    }
+  
+    .Promocoes-demo {
+      flex-direction: column; 
+      margin: 5rem 1rem; 
+    }
+  
+    .carrosel {   
+      margin: 30px 20px;  
+    }
   }
-}
