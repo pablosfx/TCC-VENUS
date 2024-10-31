@@ -27,7 +27,7 @@ export default function App() {
       <div className='Promocoes-geral'>
 
         <img className='nike-promoção' src="/assets/images/Nike foto.png" alt="" />
-        <button className='botao-verMais'>Ver mais</button>
+       <Link to='/pagina-produtos'> <button className='botao-verMais'>Ver mais</button></Link>
       </div>
       <div className='sub-app'>
       <div className='Promocoes-demo'>

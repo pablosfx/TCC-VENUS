@@ -53,6 +53,7 @@ body {
   margin: 5rem auto;
   border-radius: 0.625rem;
   padding: 2rem;
+  gap: 2rem;
   max-width: 70rem;
 }
 
@@ -63,11 +64,11 @@ body {
   padding: 2.5rem;
   background-color: #fff;
   border-radius: 0.625rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .Promocoes-demo .item-promocao:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
 }
@@ -95,6 +96,8 @@ body {
   background-color: #8c20ff;
   color: #fff;
   height: 1.875rem;
+  gap: 10px;
+  margin: 10px;
   font-size: 1.25rem;
   font-weight: 700;
   padding: 1rem 2.5rem;
