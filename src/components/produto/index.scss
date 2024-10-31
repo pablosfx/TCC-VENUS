@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    width: 11rem; // Ajuste a largura para 11rem (176px)
-    padding: 1rem; // Ajuste o padding para 1rem (16px)
+    width: 11rem; 
+    padding: 1rem; 
     border-radius: 0.625rem;
     &:hover {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      transform: scale(1.05); // Aumenta o tamanho ligeiramente
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); // Adiciona uma sombra para o efeito de borda
-      border: 1px solid #000000; // Borda ao redor do item ao passar o mouse
+      transform: scale(1.05); 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+      border: 1px solid #000000; 
       cursor: pointer;
     }
   
@@ -52,7 +52,7 @@
 
   @media (min-width: 1024px) and (max-width: 1440px) {
     .card-produto {
-        width: 85%;
+        width: 100%;
       }
   }
   @media (max-width: 768px) {
@@ -64,6 +64,6 @@
   }
   @media (min-width: 1440px) {
     .card-produto {
-        width: 80%;
+        width: 100%;
       }
   }

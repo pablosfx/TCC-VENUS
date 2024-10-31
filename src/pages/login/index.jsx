@@ -1,30 +1,53 @@
 import { useState } from "react";
 import "./index.scss";
 import { FaUser, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [nome, setNome] = useState('');
+  const [senha, setSenha] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Dados de Login:", { username, password });
-  };
+  async function entrar(e) {
+      e.preventDefault();
+
+      const usuario = {
+          "nome": nome,  // Se for email, altere para "email": nome
+          "senha": senha
+      };
+
+      const url = `http://localhost:5010/entrar/`;
+      try {
+          let resp = await axios.post(url, usuario);
+          if (resp.data.erro) {
+              toast.error(resp.data.erro);
+          } else {
+              localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario));
+              localStorage.setItem('TOKEN', resp.data.token);
+              navigate('/'); // Redireciona para a página ./app
+          }
+      } catch (error) {
+          toast.error('Erro ao fazer login');
+          console.error(error);
+      }
+  }
 
   return (
     <div className="outer-container">
+       <Link to={'/'}> <img className="voltar" src="/assets/images/voltar.png" alt="" /></Link>
       <div className="container">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={entrar}>
           <div className="primeira">
-            <h1>Bem-Vindo!!!</h1>
+            <h1>Login-ADM</h1>
             <div className="input-field">
               <input
                 type="text"
-                placeholder="E-mail"
+                placeholder="Usuario"
                 required
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={nome}  
+                onChange={(e) => setNome(e.target.value)}
               />
               <FaUser className="icon" />
             </div>
@@ -33,25 +56,22 @@ const Login = () => {
                 type="password"
                 placeholder="Senha"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={senha}  
+                onChange={(e) => setSenha(e.target.value)}
               />
               <FaLock className="icon" />
             </div>
 
             <div className="recall-forget">
-              <a href="#">Esqueceu sua senha?</a>
             </div>
             <button type="submit">Login</button>
             <div className="signup-link">
-              <p>
-                Não tem uma conta?   <Link to={'/cadastrar'}> <a href="#">Registrar</a></Link>
-              </p>
-              
+           
             </div>
           </div>
         </form>
       </div>
+      <Toaster /> {/* Adiciona o Toaster aqui */}
     </div>
   );
 };

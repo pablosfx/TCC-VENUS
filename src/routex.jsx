@@ -5,6 +5,7 @@ import Cadastrar from './pages/cadastrar'
 import App from './pages/app'
 import Pedido from './pages/pedido';
 import TermosECondicoes from './pages/termos-e-condicoes';
+import PaginaProdutos from './pages/pagina-produtos';
 
 export default function Navegacao() {
     return (
@@ -15,6 +16,7 @@ export default function Navegacao() {
       <Route path='/cadastrar' element={<Cadastrar/>}/>
       <Route path='/pedido' element={<Pedido/>}/>
       <Route path='/termos-e-condicoes' element={<TermosECondicoes/>}/>
+      <Route path='/pagina-produtos' element={<PaginaProdutos/>}/>
             </Routes>
         </BrowserRouter>
     )

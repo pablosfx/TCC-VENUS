@@ -2,23 +2,24 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import TooltipCategorias from '../../components/barra-de-categorias';
-import 'swiper/css'
-import 'swiper/css/navigation'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from "swiper/modules"
 import Produtos from '../../components/produto';
-import ItensPromocoes from '../../components/itens-promocoes';
 import Cabecalho from '../../components/cabecalho';
+import Rodape from '../../components/rodape';
+import { useHistory } from 'react-router-dom'
+
+
+
 
 export default function App() {
 
-  const [categoriaVIsivel, setCategoriaVIsivel] = useState(null);
 
 
-  // Funções para exibir e ocultar a telinha (tooltip)
-  const mostrarTela = (categoria) => setCategoriaVIsivel(categoria);
-  const esconderTela = () => setCategoriaVIsivel(null);
+
+
+
+
+
+ 
   return (
 
     <div className='App'>
@@ -30,7 +31,7 @@ export default function App() {
         <img className='nike-promoção' src="/assets/images/Nike foto.png" alt="" />
         <button className='botao-verMais'>Ver mais</button>
       </div>
-
+      <div className='sub-app'>
       <div className='Promocoes-demo'>
         <div className='item-promocao'>
           <img className='imagem-item-promocao' src="/assets/images/Nike no estilo.png" alt="" />
@@ -60,60 +61,38 @@ export default function App() {
           <button className='item-Ver'>Ver</button>
         </div>
       </div>
-      <div className='carrosel'>
-        <h1 className='escolha-seu-esporte'>Escolha seu esporte</h1>
-        <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
-          spaceBetween={0}
-          slidesPerView={3}
-          autoplay={{ delay: 3000 }}
-          pagination={{ clickable: true }}
-          navigation
-          loop={true}
-          className="carousel"
-        >
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/futebol.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/basquete.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/volei.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/natacao.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/futsal.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/skate.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/musculamento.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/corrida.png" alt="" />
-
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className='imagem-carrosel' src="/assets/images/handebol.png" alt="" />
-
-          </SwiperSlide>
 
 
+      <div className='Esportes-imgs'> 
+    <h1>Escolha seu esporte</h1>
+    <div className='imagens-esporte'>
+        <div className='imagem-container'>
+            <img className='imagem-esporte' src="/assets/images/futebol.png" alt="Futebol" />
+            <h1 className='texto-sobre-imagem'>Futebol</h1>
+        </div>
+        <div className='imagem-container'>
+            <img className='imagem-esporte' src="/assets/images/volei.png" alt="Vôlei" />
+            <h1 className='texto-sobre-imagem'>Vôlei</h1>
+        </div>
+        <div className='imagem-container'>
+            <img className='imagem-esporte' src="/assets/images/basquete.png" alt="Basquete" />
+            <h1 className='texto-sobre-imagem'>Basquete</h1>
+        </div>
+        <div className='imagem-container'>
+            <img className='imagem-esporte' src="/assets/images/natacao.png" alt="Natação" />
+            <h1 className='texto-sobre-imagem'>Natação</h1>
+        </div>
+        <div className='imagem-container'>
+            <img className='imagem-esporte' src="/assets/images/corrida.png" alt="Corrida" />
+            <h1 className='texto-sobre-imagem'>Corrida</h1>
+        </div>
+        <div className='imagem-container'>
+            <img className='imagem-esporte' src="/assets/images/skate.png" alt="Skate" />
+            <h1 className='texto-sobre-imagem'>Skate</h1>
+        </div>
+    </div>
+</div>
 
-
-        </Swiper>
-      </div>
 
 
       <div className='produto '>
@@ -126,42 +105,10 @@ export default function App() {
 
 
       </div>
-
-
-      <div className='rodape'>
-
-        <div className='cmc'><img className='logo' src="/assets/images/logo.svg" alt="" />
-          <Link to={'/termos-e-condicoes'}  ><p className='Termos'> termos e condições</p></Link></div>
-        <div className='Links-rdp'>
-          <div className='Esportes'>
-            <Link className='Esportes'>Esportes</Link>
-            <Link className='Esportes'>futebol</Link>
-            <Link className='Esportes'>basquete</Link>
-            <Link className='Esportes'>Corrida</Link>
-            <Link className='Esportes'>musculação</Link>
-            <Link className='Esportes'>volei</Link>
-          </div>
-          <div className='Marcas'>
-            <Link className='Marcas' >Marcas</Link>
-            <Link className='Marcas'>Nike</Link>
-            <Link className='Marcas'>Addidas</Link>
-            <Link className='Marcas'>Puma</Link>
-            <Link className='Marcas'>Mizuno</Link>
-            <Link className='Marcas'>Penalty</Link>
-          </div></div>
-        <div className='rdp2'>
-        <h1 className='Contato'>Contato</h1>
-          <div className='Luiz'>
-        
-            <img className='zap' src="/assets/images/zap.png" alt="" />
-            <img className='ig' src="/assets/images/instagram.png" alt="" />
-          </div>
-          <div className='pagamento-rdp'> <h1 className='forma-de-pagamento'>Forma de pagamento</h1>
-            <img className='pix' src="/assets/images/pix.png" alt="" /></div>
-
-        </div>
-
       </div>
+       <Rodape />
+
+      
     </div>
   );
 }

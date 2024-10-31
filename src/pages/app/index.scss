@@ -9,377 +9,196 @@ body {
 
 
 
+
+/* Sessão de Promoções Geral */
 .Promocoes-geral {
   display: flex;
   background-color: #ececec;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 3.125rem;
-
-  .nike-promoção {
-    width: 62.5rem;
-    height: 12.5rem;
-  }
-
-  .botao-verMais {
-    width: 12.5rem;
-    height: 3.125rem;
-    border: none;
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: 800;
-    margin: 3.125rem 3.86875rem;
-    cursor: pointer;
-    font-size: 1.5625rem;
-    border-radius: 0.5rem;
-  }
+  gap: 7rem;
+  justify-content: start;
+  width: 119rem,;
+  
+   
 }
 
+.Promocoes-geral .nike-promoção {
+  width: 75%;
+  height: 16.5rem;
+  display: block; /* Garante que a imagem respeite as dimensões definidas */
+  object-fit: cover; /* Ajusta a imagem sem distorção */
+}
+
+
+.Promocoes-geral .botao-verMais {
+  
+  width: 16.5rem;
+  height: 4.125rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5625rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.sub-app{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+/* Sessão de Promoções Demo */
 .Promocoes-demo {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  background-color: #ffff;
-  margin: 5.625rem 7.5rem;
+  align-items: center;
+  background-color: #fff;
+  margin: 5.625rem 10.5rem;
   border-radius: 0.625rem;
   padding: 2rem;
- 
-
-  .item-promocao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 2.8125rem;
-    width:80%;
-    
-    border-radius: 0.625rem;
-    &:hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-      border: 1px solid #000000;
-    }
-
-    .imagem-item-promocao {
-      width: 12.5rem;
-      border-radius: 0.625rem;
-      margin: 1.25rem;
-    }
-
-    .titulo-item-promocao {
-      font-size: 1.5620rem; 
-      font-weight: 600;
-      margin: 0.625rem;
-    }
-
-    .porcentagem-de-desconto {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .item-Ver {
-      border: none;
-      cursor: pointer;
-      background-color: #8c20ff;
-      color: #ffffff;
-      height: 1.875rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-      padding: 1.25rem 3.125rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.3125rem;
-      &:hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        transform: scale(1.1); // Aumenta o tamanho ligeiramente
-        
-        
-      }
-    }
-  }
+  width: 70rem;
 }
-.carrosel{
- display: flex;
- justify-content: center;
- align-items: center;
- position: relative;
- background-color: #ffff;
- margin: 50px 70px 50px 70px;
- padding: 20px;
- border-radius: 20px;
- 
- 
 
- .escolha-seu-esporte{
- position: absolute;
- z-index: 10;
- top: 0 ;
+.Promocoes-demo .item-promocao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.8125rem;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
- 
+.Promocoes-demo .item-promocao:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+}
 
+.Promocoes-demo .imagem-item-promocao {
+  width: 12.5rem;
+  border-radius: 0.625rem;
+  margin: 1.25rem;
+}
 
- }
+.Promocoes-demo .titulo-item-promocao {
+  font-size: 1.5625rem;
+  font-weight: 600;
+  margin: 0.625rem;
+}
+
+.Promocoes-demo .porcentagem-de-desconto {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.Promocoes-demo .item-Ver {
+  display: flex;
+  background-color: #8c20ff;
+  color: #fff;
+  height: 1.875rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.25rem 3.125rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.Promocoes-demo .item-Ver:hover {
+  transform: scale(1.1);
+}
+.Esportes-imgs{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 5rem;
+margin: 50px;
 
 }
-.carrosel img {
-  border-radius: 6.25rem;
+.imagens-esporte {
   display: flex;
   justify-content: center;
-  cursor: pointer;
-  width: 80%;
-  height: 100%;
-  margin: 3.125rem 2.5rem;
-
-  .esporte{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-
-  
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
+.imagem-container {
+  position: relative;
+  width: 15rem; /* Defina a largura da imagem */
+  border-radius: 50px;
+  overflow: hidden; /* Para esconder texto fora da imagem */
+}
+
+.imagem-esporte {
+  width: 100%; /* Ajusta a imagem ao contêiner */
+  border-radius: 50px;
+}
+
+.texto-sobre-imagem {
+  position: absolute;
+  top: 90%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Transição suave para o texto */
+}
+.imagem-container:hover {
+  transform: scale(1.1); /* Aumenta a imagem */
+}
+
+.imagem-container:hover .imagem-esporte {
+  transform: scale(1.1); /* Aumenta a imagem */
+}
+
+.imagem-container:hover .texto-sobre-imagem {
+  transform: translate(-50%, -30%); /* Move o texto para cima */
+}
+
+  
+
+
+
+/* Produtos em Destaque */
 .produto {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #ffff;
-  position: relative;
-  transform: translateX(-50%);
-  left: 50%;
-  padding:80px 0 30px 0  ;
-  width: 90%;
+  background-color: #fff;
+  padding: 4rem 0 2rem;
+  width: 60%;
   border-radius: 20px;
-   .produtos-em-destaque{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-     font-size:1,2rem ;
-    z-index: 10;
-   }
-
-   
-   
-}
-.rodape{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #6300cc;
-  padding: 20px;
-  margin-top: 30px;
- 
-
-    .Luiz{
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      gap: 10px;
-    
-    }
-  
-
-  .logo{
-    width: 200px;
-
-  }
-
-  .ig{
-    width: 30px;
-    border-radius: 10px;
-  }
-  .zap{
-    width: 30px;
-    border-radius: 10px;
-  }
-  .pix{
-    width: 30px;
-    background-color: #ffffff;
-    padding: 10px 45px;
-    border-radius: 10px;
-  }
-  .Links-rdp{
-    display: flex;
-    gap: 50px;
-    padding: 20px;
-
-
-  .Esportes {
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    text-decoration: none;
-    gap: 10px;
-  }
-  .Marcas{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: #ffffff;
-    gap: 10px;
-    
-  }
-  
-  
- 
-
-  
-}
-.Contato{
-  font-size: 20px;
-  color: #ffffff;
- }
-.forma-de-pagamento{
-  color: #ffffff;
-  font-size: 20px;
-
-}
-.Termos{
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 20px;
-
+  position: relative;
+  margin: 0 100px;
 }
 
-.pagamento-rdp{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-.cmc{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap :10px ;
-}
-
-}
-.rodape {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #6300cc;
-  padding: 20px;
-  margin-top: 30px;
-  flex-wrap: wrap; /* Permite quebra em telas menores */
-  gap: 20px; /* Espaço entre os elementos */
-}
-
-.rodape .logo {
-  width: 150px; /* Tamanho menor para melhor adaptação */
-}
-
-.rodape .ig,
-.rodape .zap,
-.rodape .pix {
-  display: flex;
-
-  gap: 20px;
-  width: 30px;
-  border-radius: 10px;
-}
-
-.rodape .Links-rdp {
-  display: flex;
-  gap: 50px;
-  padding: 20px;
-}
-
-.rodape .Links-rdp .Esportes,
-.rodape .Links-rdp .Marcas {
-  display: flex;
-  flex-direction: column;
-  color: #ffffff;
-  text-decoration: none;
-  gap: 10px;
-}
-
-.rodape .Contato,
-.rodape .forma-de-pagamento,
-.rodape .Termos {
-  color: #ffffff;
-  font-size: 18px;
-  text-align: center; /* Centraliza o texto */
-}
-
-.rodape .pagamento-rdp,
-.rodape .cmc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .rodape {
-    flex-direction: column; /* Organiza em coluna em telas menores */
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 15px;
-  }
-  
-  .rodape .Links-rdp {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Ajusta o espaço entre as seções */
-  }
-
-  .rodape .logo {
-    width: 120px; /* Reduz a logo em telas menores */
-  }
-}
-
-@media (max-width: 480px) {
-  .rodape .Links-rdp {
-    gap: 10px;
-  }
-
-  .rodape .Contato,
-  .rodape .forma-de-pagamento,
-  .rodape .Termos {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas muito pequenas */
-  }
-
-  .rodape .logo {
-    width: 100px;
-  }
+.produto .produtos-em-destaque {
+  position: absolute;
+  top: 7.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  z-index: 10;
 }
 
 
 
 
 
-@media (max-width: 600px) {
-  .container {
-      width: 90%; 
-      padding: 10px; 
-  }
 
-  .container h1 {
-      font-size: 20px; 
-  }
 
-  .input-field input {
-      padding: 10px 20px; 
-  }
-
-  .container button {
-      height: 40px; 
-  }
-  
-}
