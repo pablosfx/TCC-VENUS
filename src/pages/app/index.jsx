@@ -17,8 +17,6 @@ export default function App() {
 
 
 
-
-
  
   return (
 
@@ -94,14 +92,15 @@ export default function App() {
 </div>
 
 
+<h1 className='produtos-em-destaque'>Produtos em destaque</h1>
 
       <div className='produto '>
-        <h1 className='produtos-em-destaque'>Produtos em destaque</h1>
         <Produtos />
         <Produtos />
         <Produtos />
         <Produtos />
         <Produtos />
+        
 
 
       </div>

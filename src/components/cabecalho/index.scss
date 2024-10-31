@@ -10,9 +10,18 @@
     background-color: #6300cc;
     display: flex;
     align-items: center;
-    height: 5rem; 
+    height: 6rem; 
+    flex-direction: row;
+    gap: 1rem;
     
     
+    }
+    .icones{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      
     }
   
     .logo {
@@ -22,23 +31,39 @@
     .pesquisa {
       border: none;
       border-radius: 0.625rem;
-      height: 3.3125rem;
-      width: 43.75rem;
+      height: 4.3125rem;
+      width: 60.75rem;
       margin: 1.5625rem;
       font-size: 1.25rem;
       padding-left: 2.1875rem;
+      margin-right: 25rem;
+      
     }
   
-    .carrinho {
-      width: 2.5rem;
-      
+    .cabecalho .carrinho{
+      width: 4rem;
     }
   
     .usuario {
       width: 2.875rem;
       
     }
+    @media (max-width: 1440px){
+      .cabecalho{
+        width: 100%;
+      }
+      
+      .cabecalho .pesquisa{
+        margin-right:0rem;
+      }
+      .cabecalho .icones{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
 
+      }
+    }
     
 @media (max-width: 900px) {
     .cabecalho {
@@ -55,12 +80,66 @@
       width: 100%; 
     }
   
-    .Promocoes-demo {
-      flex-direction: column; 
-      margin: 5rem 1rem; 
+   
+  }
+  @media (max-width: 768px) {
+    .cabecalho {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap :10px;
     }
   
-    .carrosel {   
-      margin: 30px 20px;  
+  
+    .logo {
+      align-self: center;
+      margin-bottom: 0.5rem;
     }
+  
+    .pesquisa {
+      width: 50%;
+      margin: 0.5rem auto;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      height: 3rem;
+    }
+  
+    .icones {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+
+    .logo{
+      width: 5rem;
+    }
+    .cabecalho{
+      width: 30rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+    .pesquisa {
+      width: 90%;
+      margin: 0px;
+      font-size: 0.875rem;
+      padding: 0.5rem;
+      height: 3rem;
+      
+
+    }
+  
+    
+    
+    
   }

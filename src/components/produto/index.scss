@@ -67,3 +67,23 @@
         width: 100%;
       }
   }
+  
+  @media (max-width: 768px) {
+    .card-produto {
+      width: 100%;
+      max-width: 14rem; /* Limita o tamanho em telas menores */
+      padding: 0.75rem;
+    }
+    .card-produto.foto-produto{
+    max-width:2rem;
+    }
+    
+  }
+  
+  /* Ajustes para telas muito grandes */
+  @media (min-width: 1440px) {
+    .card-produto {
+      width: 100%;
+      max-width: 15rem; /* Largura controlada para manter a aparência uniforme */
+    }
+  }
