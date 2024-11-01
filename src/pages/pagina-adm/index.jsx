@@ -10,9 +10,9 @@ export default function paginaadm() {
   return (
     <div className='cabecalho '>
 
-      <Link to={'/'}><img className='logo' src="/assets/images/logo.svg" /></Link>
       <div className='adm'>
-       <h1>ADM</h1>
+       <h1>ADIMINISTRADOR</h1>
+
       </div>
 
     </div>

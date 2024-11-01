@@ -4,24 +4,36 @@ import { useState } from 'react';
 import axios from 'axios';
 
 export default function Cabecalho() {
-    const [pesquisa, setPesquisa] = useState('');
-    const [produtos, setProdutos] = useState([]);
+    const [inputValue, setInputValue] = useState('');
+    const [sugestoes, setSugestoes] = useState([]);
+    
+    const products = [
+        { nome: 'Tênis Nike Air Max' },
+        { nome: 'Tênis Adidas Ultraboost'},
+        { nome: 'Tênis Puma RS-X' },
+        { nome: 'Sandália Havaianas' },
+        { nome: 'Botas Timberland' },
+    ];
 
     const handlePesquisaChange = async (event) => {
         const valor = event.target.value;
-        setPesquisa(valor);
+        setInputValue(valor);
 
-        if (valor.length > 2) { // Começa a pesquisar após 3 caracteres
+        if (valor.length > 2) {
             try {
-                const resposta = await axios.get(`http://localhost:5010/produtos${valor}`); // Ajuste a URL conforme necessário
-                setProdutos(resposta.data);
+                const resposta = await axios.get(`http://localhost:5010/produtos/${valor}`); 
+                setSugestoes(resposta.data);
             } catch (error) {
                 console.error("Erro ao buscar produtos:", error);
             }
         } else {
-            setProdutos([]); // Limpa a lista se menos de 3 caracteres
+            setSugestoes([]);
         }
     };
+
+    const filteredProducts = products.filter(produto =>
+        produto.nome.toLowerCase().includes(inputValue.toLowerCase())
+    );
 
     return (
         <div className='cabecalho'>
@@ -32,7 +44,7 @@ export default function Cabecalho() {
                 className='pesquisa' 
                 type="text" 
                 placeholder='O que você procura?' 
-                value={pesquisa} 
+                value={inputValue} 
                 onChange={handlePesquisaChange} 
             />
             <div className='icones'>
@@ -43,9 +55,18 @@ export default function Cabecalho() {
                     <img className='carrinho' src="/assets/images/carrinho.png" alt="Carrinho" />
                 </Link>
             </div>
-            {produtos.length > 0 && (
+            {sugestoes.length > 0 && (
                 <ul className='resultado-pesquisa'>
-                    {produtos.map(produto => (
+                    {sugestoes.map(produto => (
+                        <li key={produto.produto}>
+                            <Link to={`/produto/${produto.produto}`}>{produto.nome} - {produto.valor}</Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
+            {filteredProducts.length > 0 && inputValue.length > 2 && (
+                <ul className='resultado-pesquisa'>
+                    {filteredProducts.map(produto => (
                         <li key={produto.produto}>
                             <Link to={`/produto/${produto.produto}`}>{produto.nome} - {produto.valor}</Link>
                         </li>

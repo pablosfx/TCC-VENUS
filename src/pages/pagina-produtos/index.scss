@@ -1,11 +1,15 @@
 .Lista-produtos{
     display: flex;
-    background-color: #fff;
-    width: 86rem;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 50px 20px;
-    border-radius: 10px;
-    margin: 10rem  19rem;
+    background-color: #fff;
+    padding: 5rem 2rem;
+    max-width: 90%;
+    border-radius: 1.25rem;
+    margin: 2rem auto;
+    position: relative;
+    
+
+    gap: 20px;
 }

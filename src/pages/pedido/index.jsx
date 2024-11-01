@@ -15,7 +15,7 @@ export default function Pedido (){
             <div className='info-produto'>
                 <div className='pedido-1'>
             <h1 className='nome-do-produto' >Nike no estilo</h1>
-            <p className='valor-do-produto'>R$ 600</p>
+            <p className='valor-do-produto'>R$ 300</p>
             </div>
 
             <div className='pedido-2'>
@@ -23,7 +23,9 @@ export default function Pedido (){
                  <p>forma de pagamento:</p>
              <img className='pix-foto' src="/assets/images/pix.png" alt="" />
              </div>
-                <button class>adicionar ao carrinho</button>
+                <button className='adicionar-carrinho'>Comprar</button>   
+                <p>categoria:exemplo</p>
+                
                 
 
             </div>

@@ -87,7 +87,7 @@ const Login = () => {
                         </div>
                         <div className="input-field">
                             <input
-                                type="password" // Corrigido de "senha" para "password"
+                                type="password" 
                                 placeholder="Senha"
                                 required
                                 value={senha}
