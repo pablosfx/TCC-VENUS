@@ -14,15 +14,15 @@ const Login = () => {
         e.preventDefault();
 
         const usuario = {
-            nome: nome.trim(), 
-            senha: senha.trim()
+            Usuario: nome.trim(),
+            Senha: senha.trim()  
         };
 
-        const url = 'http://localhost:5010/entrar/';
+        const url = 'http://localhost:5010/login/';
         try {
             const resp = await axios.post(url, usuario);
             if (resp.data.erro) {
-                toast.error(resp.data.erro); 
+                toast.error(resp.data.erro);
             } else {
                 localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario));
                 localStorage.setItem('TOKEN', resp.data.token);
