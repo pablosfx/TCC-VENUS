@@ -1,52 +1,87 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { GoSearch } from 'react-icons/go';
+import { AiOutlineClose } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
 
 export default function Cabecalho() {
-    const [inputValue, setInputValue] = useState('');
-    const [sugestoes, setSugestoes] = useState([]);
-    
-    const products = [
-        { nome: 'Tênis Nike Air Max' },
-        { nome: 'Tênis Adidas Ultraboost'},
-        { nome: 'Tênis Puma RS-X' },
-        { nome: 'Sandália Havaianas' },
-        { nome: 'Botas Timberland' },
+    const [inputSearch, setInputSearch] = useState("");
+    const [filterSearch, setFilterSearch] = useState([]);
+
+    const data = [
+        { id: 1, title: "Tênis Nike Air Zoom" },
+        { id: 2, title: "Camiseta Adidas Essentials" },
+        { id: 3, title: "Bola de Futebol Penalty" },
+        { id: 4, title: "Raquete Wilson Pro Staff" },
+        { id: 5, title: "Mochila Under Armour" },
+        { id: 6, title: "Calça Legging Puma" },
+        { id: 7, title: "Bermuda de Surf Quiksilver" },
+        { id: 8, title: "Jaqueta North Face" },
+        { id: 9, title: "Equipamento de Yoga Manduka" },
+        { id: 10, title: "Boné New Era" },
     ];
 
-    const handlePesquisaChange = async (event) => {
-        const valor = event.target.value;
-        setInputValue(valor);
+    const handleFilter = (event) => {
+        const searchValue = event.target.value;
+        setInputSearch(searchValue);
 
-        if (valor.length > 2) {
-            try {
-                const resposta = await axios.get(`http://localhost:5010/produtos/${valor}`); 
-                setSugestoes(resposta.data);
-            } catch (error) {
-                console.error("Erro ao buscar produtos:", error);
-            }
-        } else {
-            setSugestoes([]);
-        }
+        const newFilter = data.filter(value => {
+            return value.title.toLowerCase().includes(searchValue.toLowerCase());
+        });
+
+        setFilterSearch(newFilter);
     };
 
-    const filteredProducts = products.filter(produto =>
-        produto.nome.toLowerCase().includes(inputValue.toLowerCase())
-    );
+    useEffect(() => {
+        if (inputSearch === "") {
+            setFilterSearch([]);
+        }
+    }, [inputSearch]);
+
+    const handleClickAutoComplete = (value) => {
+        setInputSearch(value.title);
+        setFilterSearch([]);
+    };
+
+    const clearText = () => {
+        setInputSearch("");
+        setFilterSearch([]);
+    };
 
     return (
         <div className='cabecalho'>
             <Link to={'/'}>
                 <img className='logo' src="/assets/images/logo.svg" alt="Logo" />
             </Link>
-            <input 
-                className='pesquisa' 
-                type="text" 
-                placeholder='O que você procura?' 
-                value={inputValue} 
-                onChange={handlePesquisaChange} 
-            />
+            <div className='teste'>
+                <IconContext.Provider value={{ color: "#B8B8B8", size: "30px" }}>
+                    <GoSearch />
+                    <div className='pesquisa'>
+                        <input 
+                            className='input'
+                            type="text" 
+                            placeholder='Pesquisar...' 
+                            value={inputSearch} 
+                            onChange={handleFilter} 
+                        />
+                        {inputSearch && <AiOutlineClose onClick={clearText} />}
+                    </div>
+                </IconContext.Provider>
+                {filterSearch.length > 0 && (
+                    <div className='dataResult'>
+                        {filterSearch.slice(0, 15).map(value => (
+                            <div key={value.id} className='dataItem' onClick={() => handleClickAutoComplete(value)}>
+                                <IconContext.Provider value={{ color: "#B8B8B8", size: "22px" }}>
+                                    <GoSearch />
+                                </IconContext.Provider>
+                                <p>{value.title}</p>
+                            </div>
+                        ))}
+                        
+                    </div>
+                )}
+            </div>
             <div className='icones'>
                 <Link to={'/login'}>
                     <img className='usuario' src="/assets/images/usuario.png" alt="Usuário" />
@@ -55,24 +90,6 @@ export default function Cabecalho() {
                     <img className='carrinho' src="/assets/images/carrinho.png" alt="Carrinho" />
                 </Link>
             </div>
-            {sugestoes.length > 0 && (
-                <ul className='resultado-pesquisa'>
-                    {sugestoes.map(produto => (
-                        <li key={produto.produto}>
-                            <Link to={`/produto/${produto.produto}`}>{produto.nome} - {produto.valor}</Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
-            {filteredProducts.length > 0 && inputValue.length > 2 && (
-                <ul className='resultado-pesquisa'>
-                    {filteredProducts.map(produto => (
-                        <li key={produto.produto}>
-                            <Link to={`/produto/${produto.produto}`}>{produto.nome} - {produto.valor}</Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
         </div>
     );
 }
