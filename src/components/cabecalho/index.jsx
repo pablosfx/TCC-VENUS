@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons';
 export default function Cabecalho() {
     const [inputSearch, setInputSearch] = useState("");
     const [filterSearch, setFilterSearch] = useState([]);
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const data = [
         { id: 1, title: "Tênis Nike Air Zoom", url: "/produtos/tenis-nike-air-zoom" },
@@ -42,12 +42,12 @@ export default function Cabecalho() {
 
     const handleClickAutoComplete = (value) => {
         if (value.id === 1) {
-            navigate('/pagina-produtos'); // Redireciona para a página específica
+            navigate('/pagina-produtos');
         } else {
-            navigate(value.url); // Redireciona para a URL do produto
+            navigate(value.url);
         }
-        setInputSearch(""); // Limpa o campo de pesquisa
-        setFilterSearch([]); // Limpa os resultados da pesquisa
+        setInputSearch("");
+        setFilterSearch([]);
     };
 
     const clearText = () => {
@@ -64,12 +64,12 @@ export default function Cabecalho() {
                 <IconContext.Provider value={{ color: "#B8B8B8", size: "30px" }}>
                     <GoSearch />
                     <div className='pesquisa'>
-                        <input 
+                        <input
                             className='input'
-                            type="text" 
-                            placeholder='Pesquisar...' 
-                            value={inputSearch} 
-                            onChange={handleFilter} 
+                            type="text"
+                            placeholder='Pesquisar...'
+                            value={inputSearch}
+                            onChange={handleFilter}
                         />
                         {inputSearch && <AiOutlineClose onClick={clearText} />}
                     </div>
@@ -77,7 +77,7 @@ export default function Cabecalho() {
                 {filterSearch.length > 0 && (
                     <div className='dataResult'>
                         {filterSearch.slice(0, 15).map(value => (
-                            <div key={value.id} className='dataItem' onClick={() => handleClickAutoComplete(value)}>
+                            <div className='dataItem' key={value.id} onClick={() => handleClickAutoComplete(value)}>
                                 <IconContext.Provider value={{ color: "#B8B8B8", size: "22px" }}>
                                     <GoSearch />
                                 </IconContext.Provider>
@@ -87,6 +87,9 @@ export default function Cabecalho() {
                     </div>
                 )}
             </div>
+
+
+
             <div className='icones'>
                 <Link to={'/login'}>
                     <img className='usuario' src="/assets/images/usuario.png" alt="Usuário" />

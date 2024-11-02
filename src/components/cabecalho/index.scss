@@ -56,53 +56,37 @@
   }
 
   
-  
- 
   .dataResult {
+    height: auto; 
     display: flex;
-   
     flex-direction: column;
+    
     border-radius: 5px;
     background: #f1f1f1;
-
-    overflow: hidden;
-    overflow-y: auto; /* Adiciona scrollbar se necessário */
-    
+    overflow-y: auto;
+    position: absolute; 
+    gap: 10px;
+    top: 5rem;
+    z-index: 10; 
+    left: 18rem;
+    max-height: 200px; 
 }
- 
+
   
   .dataResult::-webkit-scrollbar {
       display: none;
   }
-  
+
+    
   .dataItem {
-    padding: 24px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #000;
-
-
-    cursor: pointer;
-      gap: 16px;
-  }
+   
+  display: flex;
   
+  }
   .dataItem:hover {
       background-color: #747474;
   }
-  .dataResult {
-    border-radius: 5px;
-    background: #f1f1f1;
-  
-    overflow: hidden;
-    overflow-y: auto;
-    display:  flex ;
-    position: absolute;
-    
-  
-  
-  }
+ 
   
     .cabecalho .carrinho{
       width: 4rem;
