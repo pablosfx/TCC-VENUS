@@ -8,18 +8,18 @@ import { IconContext } from 'react-icons';
 export default function Cabecalho() {
     const [inputSearch, setInputSearch] = useState("");
     const [filterSearch, setFilterSearch] = useState([]);
-
+   
     const data = [
-        { id: 1, title: "Tênis Nike Air Zoom" },
-        { id: 2, title: "Camiseta Adidas Essentials" },
-        { id: 3, title: "Bola de Futebol Penalty" },
-        { id: 4, title: "Raquete Wilson Pro Staff" },
-        { id: 5, title: "Mochila Under Armour" },
-        { id: 6, title: "Calça Legging Puma" },
-        { id: 7, title: "Bermuda de Surf Quiksilver" },
-        { id: 8, title: "Jaqueta North Face" },
-        { id: 9, title: "Equipamento de Yoga Manduka" },
-        { id: 10, title: "Boné New Era" },
+        { id: 1, title: "Tênis Nike Air Zoom", url: "/produtos/tenis-nike-air-zoom" },
+        { id: 2, title: "Camiseta Adidas Essentials", url: "/produtos/camiseta-adidas" },
+        { id: 3, title: "Bola de Futebol Penalty", url: "/produtos/bola-penalty" },
+        { id: 4, title: "Raquete Wilson Pro Staff", url: "/produtos/raquete-wilson" },
+        { id: 5, title: "Mochila Under Armour", url: "/produtos/mochila-under-armour" },
+        { id: 6, title: "Calça Legging Puma", url: "/produtos/calca-legging-puma" },
+        { id: 7, title: "Bermuda de Surf Quiksilver", url: "/produtos/bermuda-quiksilver" },
+        { id: 8, title: "Jaqueta North Face", url: "/produtos/jaqueta-north-face" },
+        { id: 9, title: "Equipamento de Yoga Manduka", url: "/produtos/yoga-manduka" },
+        { id: 10, title: "Boné New Era", url: "/produtos/bone-new-era" },
     ];
 
     const handleFilter = (event) => {
@@ -71,12 +71,12 @@ export default function Cabecalho() {
                 {filterSearch.length > 0 && (
                     <div className='dataResult'>
                         {filterSearch.slice(0, 15).map(value => (
-                            <div key={value.id} className='dataItem' onClick={() => handleClickAutoComplete(value)}>
-                                <IconContext.Provider value={{ color: "#B8B8B8", size: "22px" }}>
-                                    <GoSearch />
-                                </IconContext.Provider>
-                                <p>{value.title}</p>
-                            </div>
+                             <Link to= {'/pagina-produtos'} key={value.id} className='dataItem'>
+                             <IconContext.Provider value={{ color: "#B8B8B8", size: "22px" }}>
+                                 <GoSearch />
+                             </IconContext.Provider>
+                             <p>{value.title}</p>
+                         </Link>
                         ))}
                         
                     </div>
