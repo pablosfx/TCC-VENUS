@@ -1,5 +1,5 @@
 import './index.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { GoSearch } from 'react-icons/go';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -8,7 +8,8 @@ import { IconContext } from 'react-icons';
 export default function Cabecalho() {
     const [inputSearch, setInputSearch] = useState("");
     const [filterSearch, setFilterSearch] = useState([]);
-   
+    const navigate = useNavigate(); 
+
     const data = [
         { id: 1, title: "Tênis Nike Air Zoom", url: "/produtos/tenis-nike-air-zoom" },
         { id: 2, title: "Camiseta Adidas Essentials", url: "/produtos/camiseta-adidas" },
@@ -40,8 +41,13 @@ export default function Cabecalho() {
     }, [inputSearch]);
 
     const handleClickAutoComplete = (value) => {
-        setInputSearch(value.title);
-        setFilterSearch([]);
+        if (value.id === 1) {
+            navigate('/pagina-produtos'); // Redireciona para a página específica
+        } else {
+            navigate(value.url); // Redireciona para a URL do produto
+        }
+        setInputSearch(""); // Limpa o campo de pesquisa
+        setFilterSearch([]); // Limpa os resultados da pesquisa
     };
 
     const clearText = () => {
@@ -71,14 +77,13 @@ export default function Cabecalho() {
                 {filterSearch.length > 0 && (
                     <div className='dataResult'>
                         {filterSearch.slice(0, 15).map(value => (
-                             <Link to= {'/pagina-produtos'} key={value.id} className='dataItem'>
-                             <IconContext.Provider value={{ color: "#B8B8B8", size: "22px" }}>
-                                 <GoSearch />
-                             </IconContext.Provider>
-                             <p>{value.title}</p>
-                         </Link>
+                            <div key={value.id} className='dataItem' onClick={() => handleClickAutoComplete(value)}>
+                                <IconContext.Provider value={{ color: "#B8B8B8", size: "22px" }}>
+                                    <GoSearch />
+                                </IconContext.Provider>
+                                <p>{value.title}</p>
+                            </div>
                         ))}
-                        
                     </div>
                 )}
             </div>

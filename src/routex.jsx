@@ -9,7 +9,6 @@ import PaginaProdutos from './pages/pagina-produtos';
 import Paginaadm from './pages/pagina-adm'
 import Naoencontrado from './pages/naoencontrada'
 import Carrinho from './pages/carrinho'
-import Input from './pages/input'
  
 export default function Navegacao() {
     return (
@@ -23,7 +22,6 @@ export default function Navegacao() {
       <Route path='/pagina-produtos' element={<PaginaProdutos/>}/>
       <Route path='/pagina-adm' element={<Paginaadm/>}/>
       <Route path='/carrinho' element={<Carrinho/>}/>
-      <Route path='/input' element={<Input/>}/>
 
 
 
