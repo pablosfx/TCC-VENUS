@@ -7,10 +7,14 @@ export default function naoencontrado() {
 return(
 
  <div className="naoencontrado">
-    <div className={'container'}>
-    <h1>Pagina não encontrada</h1>
-   <Link className='link' to={'/'}> <button className="button">voltar</button></Link>
-    </div>
+   <h1 className='pg'>Pagina Nao Encontrada</h1>
+    <img  className='pg'src="/assets/images/404.png" alt="" />
+ <div>
+
+
+    <Link to={'/'}> <button className='botao'>Voltar</button></Link>
+    
+ </div>
  </div>
 
 )

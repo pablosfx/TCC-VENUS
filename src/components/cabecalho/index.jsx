@@ -18,7 +18,7 @@ export default function Cabecalho() {
         { id: 5, title: "Mochila Under Armour", url: "/produtos/mochila-under-armour" },
         { id: 6, title: "Calça Legging Puma", url: "/produtos/calca-legging-puma" },
         { id: 7, title: "Bermuda de Surf Quiksilver", url: "/produtos/bermuda-quiksilver" },
-        { id: 8, title: "Jaqueta North Face", url: "/produtos/jaqueta-north-face" },
+        { id: 8, title: "Jaqueta The North Face", url: "/produtos/jaqueta-north-face" },
         { id: 9, title: "Equipamento de Yoga Manduka", url: "/produtos/yoga-manduka" },
         { id: 10, title: "Boné New Era", url: "/produtos/bone-new-era" },
     ];
@@ -55,6 +55,12 @@ export default function Cabecalho() {
         setFilterSearch([]);
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter' && filterSearch.length > 0) {
+            handleClickAutoComplete(filterSearch[0]); // Navega para o primeiro item filtrado
+        }
+    };
+
     return (
         <div className='cabecalho'>
             <Link to={'/'}>
@@ -70,6 +76,7 @@ export default function Cabecalho() {
                             placeholder='Pesquisar...'
                             value={inputSearch}
                             onChange={handleFilter}
+                            onKeyDown={handleKeyDown} // Adicionando o manipulador de eventos
                         />
                         {inputSearch && <AiOutlineClose onClick={clearText} />}
                     </div>
@@ -87,8 +94,6 @@ export default function Cabecalho() {
                     </div>
                 )}
             </div>
-
-
 
             <div className='icones'>
                 <Link to={'/login'}>
