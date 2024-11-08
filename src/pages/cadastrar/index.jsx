@@ -52,9 +52,12 @@ const Login = () => {
 
     return (
         <div className="outer-container">
-               <Link to={'/'}> <img className="voltar" src="/assets/images/voltar.png" alt="" /></Link>
+              
             <div className="container">
                 <form onSubmit={handleSubmit}>
+                <Link to={'/'}>
+                            <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
+                        </Link>
                     <div className="primeira">
                         <div className="cadas">Registrar-se</div>
                         <div className="input-field">

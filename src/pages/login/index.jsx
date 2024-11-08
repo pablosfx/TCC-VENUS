@@ -44,7 +44,7 @@ const Login = () => {
                             <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
                         </Link>
 
-                        <h1>Login-ADM</h1>
+                        <h1>Login</h1>
                         <div className="input-field">
                             <input
                                 type="text"
@@ -67,6 +67,7 @@ const Login = () => {
                         </div>
                         <button type="submit">Login</button>
                     </div>
+                <div className="h1">   <Link to={'/cadastrar'}><h1>Cadastrar-se</h1></Link></div> 
                 </form>
             </div>
             <Toaster />

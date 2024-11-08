@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    width: 11rem; 
+    width: 18rem; 
     padding: 1rem; 
     border-radius: 0.625rem;
     &:hover {
@@ -15,75 +15,272 @@
   
   
     .foto-produto {
-      width: 11.875rem;
+      width: 17.875rem;
       align-self: center;
     }
   
     .nome-produto {
       align-self: flex-start;
-      font-size: 1.0625rem;
-      margin: 1.25rem 0;
+      font-size: 2.0625rem;
+      margin: 2.25rem 0;
     }
   
     .preco-total {
-      font-size: 0.625rem;
-      margin: 0;
+      font-size: 1.425rem;
+      margin:  1rem 0;
       text-decoration: line-through;
     }
   
     .preco-final {
       font-weight: 700;
       align-self: flex-start;
-      margin-top: 0.625rem;
+      margin-top: 1.25rem;
+      font-size: 1.5rem;
     }
   
     p.frete {
+      font-size: 30px;
       margin: 1.25rem 3.125rem 0;
     }
   }
 
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-
+  @media (max-width: 1440px){
     .card-produto {
-        width: 85%;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 13rem; 
+      padding: 1rem; 
+      border-radius: 0.625rem;
+      &:hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: scale(1.05); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        border: 1px solid #000000; 
+        cursor: pointer;
       }
-  }
-
-  @media (min-width: 1024px) and (max-width: 1440px) {
-    .card-produto {
-        width: 100%;
+    
+    
+      .foto-produto {
+        width: 12.875rem;
+        align-self: center;
       }
-  }
-  @media (max-width: 768px) {
-    .card-produto {
-        width:85%;
-        padding: 1rem;
+    
+      .nome-produto {
+        align-self: flex-start;
+        font-size: 1.5625rem;
+        margin: 1.8rem 0;
       }
-
-  }
-  @media (min-width: 1440px) {
-    .card-produto {
-        width: 100%;
+    
+      .preco-total {
+        font-size: 1.125rem;
+        margin:  1rem 0;
+        text-decoration: line-through;
       }
+    
+      .preco-final {
+        font-weight: 700;
+        align-self: flex-start;
+        margin-top: 1rem;
+        font-size: 1.3rem;
+      }
+    
+      p.frete {
+        font-size: 20px;
+        margin: 1rem 3.125rem 0;
+      }
+    }
   }
   
   @media (max-width: 768px) {
     .card-produto {
-      width: 100%;
-      max-width: 14rem; /* Limita o tamanho em telas menores */
-      padding: 0.75rem;
-    }
-    .card-produto.foto-produto{
-    max-width:2rem;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 10rem; 
+      padding: 1rem; 
+      border-radius: 0.625rem;
+      &:hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: scale(1.05); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        border: 1px solid #000000; 
+        cursor: pointer;
+      }
+    
+    
+      .foto-produto {
+        width: 8.875rem;
+        align-self: center;
+      }
+    
+      .nome-produto {
+        align-self: flex-start;
+        font-size: 1.0625rem;
+        margin: 1.25rem 0;
+      }
+    
+      .preco-total {
+        font-size: 0.925rem;
+        margin:  1rem 0;
+        text-decoration: line-through;
+      }
+    
+      .preco-final {
+        font-weight: 700;
+        align-self: flex-start;
+        margin-top: 1.25rem;
+        font-size: 1rem;
+      }
+    
+      p.frete {
+        font-size: 10px;
+        margin: 1.25rem 3.125rem 0;
+      }
+    } 
+    
+
+  }
+
+  @media (max-width:960px){
+    .card-produto {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 10rem; 
+      padding: 1rem; 
+      border-radius: 0.625rem;
+      &:hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: scale(1.05); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        border: 1px solid #000000; 
+        cursor: pointer;
+      }
+    
+    
+      .foto-produto {
+        width: 8.875rem;
+        align-self: center;
+      }
+    
+      .nome-produto {
+        align-self: flex-start;
+        font-size: 1.0625rem;
+        margin: 1.25rem 0;
+      }
+    
+      .preco-total {
+        font-size: 0.925rem;
+        margin:  1rem 0;
+        text-decoration: line-through;
+      }
+    
+      .preco-final {
+        font-weight: 700;
+        align-self: flex-start;
+        margin-top: 1.25rem;
+        font-size: 1rem;
+      }
+    
+      p.frete {
+        font-size: 10px;
+        margin: 1.25rem 3.125rem 0;
+      }
     }
     
   }
-  
-  /* Ajustes para telas muito grandes */
-  @media (min-width: 1440px) {
+  @media (max-width:480px) {
     .card-produto {
-      width: 100%;
-      max-width: 15rem; /* Largura controlada para manter a aparência uniforme */
-    }
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 5rem; 
+      padding: 1rem; 
+      border-radius: 0.625rem;
+      &:hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: scale(1.05); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        border: 1px solid #000000; 
+        cursor: pointer;
+      }
+    
+    
+      .foto-produto {
+        width: 3.875rem;
+        align-self: center;
+      }
+    
+      .nome-produto {
+        align-self: flex-start;
+        font-size: 0.4625rem;
+        margin: .25rem 0;
+      }
+    
+      .preco-total {
+        font-size: 0.325rem;
+        margin:  0.2rem 0;
+        text-decoration: line-through;
+      }
+    
+      .preco-final {
+        font-weight: 700;
+        align-self: flex-start;
+        margin-top: 0.25rem;
+        font-size: 0.5rem;
+      }
+    
+      p.frete {
+        font-size: 5px;
+        margin: 0.25rem 1.125rem 0;
+      }
+    } 
+  }
+  @media (max-width:640px){
+    .card-produto {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 5rem; 
+      padding: 1rem; 
+      border-radius: 0.625rem;
+      &:hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: scale(1.05); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        border: 1px solid #000000; 
+        cursor: pointer;
+      }
+    
+    
+      .foto-produto {
+        width: 3.875rem;
+        align-self: center;
+      }
+    
+      .nome-produto {
+        align-self: flex-start;
+        font-size: 0.4625rem;
+        margin: .25rem 0;
+      }
+    
+      .preco-total {
+        font-size: 0.325rem;
+        margin:  0.2rem 0;
+        text-decoration: line-through;
+      }
+    
+      .preco-final {
+        font-weight: 700;
+        align-self: flex-start;
+        margin-top: 0.25rem;
+        font-size: 0.5rem;
+      }
+    
+      p.frete {
+        font-size: 5px;
+        margin: 0.25rem 1.125rem 0;
+      }
+    } 
   }

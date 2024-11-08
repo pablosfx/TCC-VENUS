@@ -30,9 +30,12 @@ export default function Rodape (){
 <h1 className='Contato'>Contato</h1>
   <div className='Luiz'>
 
-    <img className='zap' src="/assets/images/zap.png" alt="" />
-    <img className='ig' src="/assets/images/instagram.png" alt="" />
-  </div>
+  <a href="https://wa.me/5511954395235" target="_blank">
+    <img className='zap' src="/assets/images/zap.png" alt="WhatsApp" />
+</a>
+<a href="https://instagram.com/y_luiz19" target="_blank">
+    <img className='ig' src="/assets/images/instagram.png" alt="Instagram" />
+</a>  </div>
   <div className='pagamento-rdp'> <h1 className='forma-de-pagamento'>Forma de pagamento</h1>
     <img className='pix' src="/assets/images/pix.png" alt="" /></div>
 

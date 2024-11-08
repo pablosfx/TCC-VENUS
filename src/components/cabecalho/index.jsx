@@ -10,18 +10,20 @@ export default function Cabecalho() {
     const [filterSearch, setFilterSearch] = useState([]);
     const navigate = useNavigate();
 
-    const data = [
-        { id: 1, title: "Tênis Nike Air Zoom", url: "/produtos/tenis-nike-air-zoom" },
-        { id: 2, title: "Camiseta Adidas Essentials", url: "/produtos/camiseta-adidas" },
-        { id: 3, title: "Bola de Futebol Penalty", url: "/produtos/bola-penalty" },
-        { id: 4, title: "Raquete Wilson Pro Staff", url: "/produtos/raquete-wilson" },
-        { id: 5, title: "Mochila Under Armour", url: "/produtos/mochila-under-armour" },
-        { id: 6, title: "Calça Legging Puma", url: "/produtos/calca-legging-puma" },
-        { id: 7, title: "Bermuda de Surf Quiksilver", url: "/produtos/bermuda-quiksilver" },
-        { id: 8, title: "Jaqueta The North Face", url: "/produtos/jaqueta-north-face" },
-        { id: 9, title: "Equipamento de Yoga Manduka", url: "/produtos/yoga-manduka" },
-        { id: 10, title: "Boné New Era", url: "/produtos/bone-new-era" },
-    ];
+    const data =[
+        { id: 1, "title": "Bermuda de Surf Quiksilver", "url": "/produtos/bermuda-quiksilver" },
+        { id: 2, "title": "Boné New Era", "url": "/produtos/bone-new-era" },
+        { id: 3, "title": "bola de Futebol", "url": "/produtos/bola-penalty" },
+        { id: 4, "title": "bola de basquete", "url": "/produtos/raquete-wilson" },
+        { id: 5, "title": "Calça Legging Puma", "url": "/produtos/calca-legging-puma" },
+        { id: 6, "title": "camiseta Adidas", "url": "/produtos/camiseta-adidas" },
+        { id: 7, "title": "camisa nike", "url": "/produtos/yoga-manduka" },
+        { id: 8, "title": "Equipamento de Yoga Manduka", "url": "/produtos/yoga-manduka" },
+        { id: 9, "title": "Jaqueta The North Face", "url": "/produtos/jaqueta-north-face" },
+        { id: 10, "title": "Mochila", "url": "/produtos/mochila-under-armour" },
+        { id : 11, "title": "tenis Nike", "url": "/produtos/tenis-nike-air-zoom" }
+    ]
+    
 
     const handleFilter = (event) => {
         const searchValue = event.target.value;
@@ -67,8 +69,8 @@ export default function Cabecalho() {
                 <img className='logo' src="/assets/images/logo.svg" alt="Logo" />
             </Link>
             <div className='teste'>
-                <IconContext.Provider value={{ color: "#B8B8B8", size: "30px" }}>
-                    <GoSearch />
+                
+                    
                     <div className='pesquisa'>
                         <input
                             className='input'
@@ -80,7 +82,6 @@ export default function Cabecalho() {
                         />
                         {inputSearch && <AiOutlineClose onClick={clearText} />}
                     </div>
-                </IconContext.Provider>
                 {filterSearch.length > 0 && (
                     <div className='dataResult'>
                         {filterSearch.slice(0, 15).map(value => (

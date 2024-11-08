@@ -1,11 +1,4 @@
-/* Reset de CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Configurações do cabeçalho */
 .cabecalho {
     background-color: #6300cc;
     display: flex;
@@ -13,6 +6,7 @@
     height: 6rem; 
     flex-direction: row;
     gap: 1rem;
+    justify-content: space-between;
     
     
     }
@@ -35,9 +29,11 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+ 
 }
 .pesquisa {
-  position: relative; /* Para que os resultados apareçam corretamente em relação ao input */
+  
+  position: relative; 
   display: flex;
   align-items: center;
 }
@@ -47,12 +43,14 @@
       align-items: center;
       justify-content: center;
       padding: 0 32px;
-      width: 500px;
+      width: 50rem;
       height: 55px;
       border-radius: 5px;
       background-color: white;
       gap: 24px;
       border: none;
+      font-size: 1.5rem;
+      
   
   }
 
@@ -61,17 +59,16 @@
     height: auto; 
     display: flex;
     flex-direction: column;
-    width: 30rem;
+    justify-content: center;
+    width: 50rem;
     
     border-radius: 5px;
     background: #f1f1f1;
     overflow-y: auto;
-    position: absolute; 
     gap: 10px;
-    top: 5rem;
     z-index: 10; 
-    left: 17rem;
-    max-height: 200px; 
+    left: 28%;
+    
 }
 
   
@@ -83,6 +80,10 @@
   .dataItem {
    
   display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3px;
+
   
   }
   .dataItem:hover {
@@ -99,27 +100,95 @@
       
     }
     @media (max-width: 1440px){
-      .cabecalho{
-        width: 100%;
-      }
-      
-      .cabecalho .pesquisa{
-        margin-right:0rem;
-        height: 3.5rem;
-      }
-      .cabecalho .icones{
+      .cabecalho {
+        background-color: #6300cc;
         display: flex;
-        gap: 10px;
-        justify-content: center;
         align-items: center;
-
+        height: 6rem; 
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        
+        
+        }
+        .icones{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-items: center;
+          margin: 1rem;
+          
+        }
+      
+        .logo {
+          width: 11.25rem;
+        }
+      
+        
+    .teste{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+     
+    }
+    .pesquisa {
+      
+      position: relative; 
+      display: flex;
+      align-items: center;
+    }
+    
+        .input {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 32px;
+          width: 30rem;
+          height: 55px;
+          border-radius: 5px;
+          background-color: white;
+          gap: 24px;
+          border: none;
+          font-size: 1.5rem;
+      
+      }
+    
+      
+      .dataResult {
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        
+        border-radius: 5px;
+        background: #f1f1f1;
+        overflow-y: auto;
+        gap: 10px;
+        top: 5rem;
+        position: absolute;
+        z-index: 10; 
+        left: 28rem;
+        max-height: 200px; 
+    }
+    
+      
+      .dataResult::-webkit-scrollbar {
+          display: none;
+      }
+    
+        
+      .dataItem {
+       
+      display: flex;
+      
       }
       .cabecalho .carrinho{
-        width: 2rem;
+        width: 2.5rem;
       }
     
       .usuario {
-        width: 1.575rem;
+        width: 1.975rem;
         
       }
     }
@@ -132,7 +201,7 @@
    
   
     .cabecalho .usuario {
-      margin-left: 0; /* Remove a margem à esquerda do ícone do usuário */
+      margin-left: 0; 
     }
   
     .cabecalho .continuar {
@@ -143,59 +212,195 @@
   }
   @media (max-width: 768px) {
     .cabecalho {
-      flex-direction: column;
-      align-items: stretch;
-      padding: 1rem;
-      height: auto;
+      background-color: #6300cc;
       display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
       align-items: center;
-      gap :10px;
+      height: 4rem; 
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: space-between;
+      
+      
+      }
+      .icones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        margin: 1rem;
+        
+        
+      }
+    
+      .logo {
+        width: 7.25rem;
+      }
+    
+      
+  .teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+   
+  }
+  .pesquisa {
+    
+    position: relative; 
+    display: flex;
+    align-items: center;
+  }
+  
+      .input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 32px;
+        width: 15rem;
+        height: 40px;
+        border-radius: 5px;
+        background-color: white;
+        gap: 24px;
+        border: none;
+        font-size: 1rem;
+    
     }
   
+    
+    .dataResult {
+      height: auto; 
+      display: flex;
+      flex-direction: column;
+      width: 30rem;
+      
+      border-radius: 5px;
+      background: #f1f1f1;
+      overflow-y: auto;
+      position: absolute; 
+      gap: 10px;
+      top: 5rem;
+      z-index: 10; 
+      left: 17rem;
+      max-height: 200px; 
+  }
   
-    .logo {
-      align-self: center;
-      margin-bottom: 0.5rem;
+    
+    .dataResult::-webkit-scrollbar {
+        display: none;
     }
   
-    .pesquisa {
-      width: 50%;
-      margin: 0.5rem auto;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      height: 3rem;
+      
+    .dataItem {
+     
+    display: flex;
+    
+    }
+    .cabecalho .carrinho{
+      width: 2rem;
     }
   
-    .icones {
-      justify-content: center;
+    .usuario {
+      width: 1.575rem;
+      
     }
   }
   
   @media (max-width: 480px) {
 
-    .logo{
-      width: 5rem;
-    }
-    .cabecalho{
-      width: 30rem;
+    .cabecalho {
+      background-color: #6300cc;
       display: flex;
-      justify-content: center;
       align-items: center;
+      height: 2rem; 
       flex-direction: row;
-      flex-wrap: nowrap;
       gap: 1rem;
-    }
-    .pesquisa {
-      width: 90%;
-      margin: 0px;
-      font-size: 0.875rem;
-      padding: 0.5rem;
-      height: 3rem;
+      justify-content: space-between;
       
+      
+      }
+      .icones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        margin: 1rem;
+        
+        
+      }
+    
+      .logo {
+        width: 4.25rem;
+      }
+    
+      
+  .teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+   
+  }
+  .pesquisa {
+    
+    position: relative; 
+    display: flex;
+    align-items: center;
+  }
+  
+      .input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        width: 10rem;
+        height: 20px;
+        border-radius: 5px;
+        background-color: white;
+        gap: 24px;
+        border: none;
+        font-size: 0.5rem;
+    
+    }
+  
+    
+    .dataResult {
+      height: auto; 
+      display: flex;
+      flex-direction: column;
+      width: 30rem;
+      
+      border-radius: 5px;
+      background: #f1f1f1;
+      overflow-y: auto;
+      position: absolute; 
+      gap: 10px;
+      top: 5rem;
+      z-index: 10; 
+      left: 17rem;
+      max-height: 200px; 
+  }
+  
+    
+    .dataResult::-webkit-scrollbar {
+        display: none;
+        text-align: center;
 
+    }
+  
+      
+    .dataItem {
+     
+    display: flex;      text-align: center;
+
+    
+    }
+    .cabecalho .carrinho{
+      width: 1.5rem;
+    }
+  
+    .usuario {
+      width: 1rem;
+      
     }
   
     
