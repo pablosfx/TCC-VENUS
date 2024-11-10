@@ -6,7 +6,7 @@ import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
-    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const navigate = useNavigate();
 
@@ -14,8 +14,8 @@ const Login = () => {
         e.preventDefault();
 
         const usuario = {
-            Usuario: nome.trim(),
-            Senha: senha.trim()  
+            email: email.trim(),
+            senha: senha.trim()  
         };
 
         const url = 'http://localhost:5010/login/';
@@ -27,7 +27,7 @@ const Login = () => {
                 localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario));
                 localStorage.setItem('TOKEN', resp.data.token);
                 
-                navigate('/pagina-adm', { state: { usuario: resp.data.usuario } });
+                navigate('/', { state: { usuario: resp.data.usuario } });
             }
         } catch (error) {
             console.error('Erro ao fazer login:', error);
@@ -48,10 +48,10 @@ const Login = () => {
                         <div className="input-field">
                             <input
                                 type="text"
-                                placeholder="Usuário"
+                                placeholder="E-mail"
                                 required
-                                value={nome}
-                                onChange={(e) => setNome(e.target.value)}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                             <FaUser className="icon" />
                         </div>
@@ -67,7 +67,9 @@ const Login = () => {
                         </div>
                         <button type="submit">Login</button>
                     </div>
-                <div className="h1">   <Link to={'/cadastrar'}><h1>Cadastrar-se</h1></Link></div> 
+                    <div className="h1">
+                        <Link to={'/cadastrar'}><h1>Cadastrar-se</h1></Link>
+                    </div> 
                 </form>
             </div>
             <Toaster />

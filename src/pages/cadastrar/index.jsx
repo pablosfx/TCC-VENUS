@@ -7,57 +7,73 @@ import "./index.scss";
 const Login = () => {
     const [token, setToken] = useState(null);
     const [email, setEmail] = useState("");
-    const [Telefone, setTelefone] = useState("");
     const [nome, setNome] = useState("");
     const [senha, setSenha] = useState("");
     const navigate = useNavigate();
     const { id } = useParams();
 
-    const consultar = async () => {
-        const paramCorpo = {
-            "email": email,
-            "telefone": Telefone,
-            "nome": nome,
-            "senha": senha,
-        };
-        if (id === undefined) {
-            const url = `http://localhost:5010/clientes?x-access-token=${token}`;
+    // Função para registrar um novo usuário
+    const registrar = async () => {
+        try {
+            const url = `http://localhost:5010/cadastro`;
+            const paramCorpo = {
+                nome,
+                email,
+                senha,
+            };
+
             await axios.post(url, paramCorpo);
-        } else {
-            const url = `http://localhost:5010/clientes/${id}?x-access-token=${token}`;
+
+            // Redireciona para a tela de login após cadastro
+            navigate('/login');
+        } catch (error) {
+            console.error("Erro ao registrar:", error.response?.data || error.message);
+            alert("Erro ao registrar. Verifique os dados e tente novamente.");
+        }
+    };
+
+    // Função para consultar dados do usuário (se o ID for fornecido)
+    const consultar = async () => {
+        try {
+            const url = `http://localhost:5010/cadastro/${id}`;
             let resp = await axios.get(url);
             let dados = resp.data;
 
             setEmail(dados.email);
-            setTelefone(dados.telefone);
             setNome(dados.nome);
             setSenha(dados.senha);
+        } catch (error) {
+            console.error("Erro ao consultar:", error.response?.data || error.message);
+            alert("Erro ao carregar dados do usuário.");
         }
     };
 
+    // Carrega token e consulta dados do usuário se ID for fornecido
     useEffect(() => {
         const usu = localStorage.getItem('USUARIO');
-        setToken(usu);
-        if (usu === undefined) {
+        if (!usu) {
             navigate('/');
-        }
-        if (id) {
-        consultar();
+        } else {
+            setToken(usu);
+            if (id) {
+                consultar();
+            }
         }
     }, [id, navigate]);
 
-    const handleSubmit = (e) => {
+    // Lida com o envio do formulário
+    const handleSubmit = async (e) => {
         e.preventDefault();
-    }
+        await registrar();
+    };
 
     return (
         <div className="outer-container">
-              
             <div className="container">
                 <form onSubmit={handleSubmit}>
-                <Link to={'/'}>
-                            <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
-                        </Link>
+                    <Link to={'/'}>
+                        <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
+                    </Link>
                     <div className="primeira">
                         <div className="cadas">Registrar-se</div>
                         <div className="input-field">
@@ -67,15 +83,6 @@ const Login = () => {
                                 required
                                 value={nome}
                                 onChange={(e) => setNome(e.target.value)}
-                            />
-                        </div>
-                        <div className="input-field">
-                            <input
-                                type="text"
-                                placeholder="Telefone"
-                                required
-                                value={Telefone}
-                                onChange={(e) => setTelefone(e.target.value)}
                             />
                         </div>
                         <div className="input-field">
@@ -98,8 +105,7 @@ const Login = () => {
                             />
                             <FaLock className="icon" />
                         </div>
-                        <button  className="butao" type="submit">Registrar-se</button>
-                        <div className="signup-link"></div>
+                        <button className="butao" type="submit">Registrar-se</button>
                     </div>
                 </form>
             </div>
