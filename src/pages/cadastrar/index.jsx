@@ -12,7 +12,6 @@ const Login = () => {
     const navigate = useNavigate();
     const { id } = useParams();
 
-    // Função para registrar um novo usuário
     const registrar = async () => {
         try {
             const url = `http://localhost:5010/cadastro`;
@@ -24,7 +23,6 @@ const Login = () => {
 
             await axios.post(url, paramCorpo);
 
-            // Redireciona para a tela de login após cadastro
             navigate('/login');
         } catch (error) {
             console.error("Erro ao registrar:", error.response?.data || error.message);
@@ -32,7 +30,6 @@ const Login = () => {
         }
     };
 
-    // Função para consultar dados do usuário (se o ID for fornecido)
     const consultar = async () => {
         try {
             const url = `http://localhost:5010/cadastro/${id}`;
@@ -48,7 +45,6 @@ const Login = () => {
         }
     };
 
-    // Carrega token e consulta dados do usuário se ID for fornecido
     useEffect(() => {
         const usu = localStorage.getItem('USUARIO');
         if (!usu) {
@@ -61,7 +57,6 @@ const Login = () => {
         }
     }, [id, navigate]);
 
-    // Lida com o envio do formulário
     const handleSubmit = async (e) => {
         e.preventDefault();
         await registrar();
@@ -71,7 +66,7 @@ const Login = () => {
         <div className="outer-container">
             <div className="container">
                 <form onSubmit={handleSubmit}>
-                    <Link to={'/'}>
+                    <Link to={'/login'}>
                         <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
                     </Link>
                     <div className="primeira">
