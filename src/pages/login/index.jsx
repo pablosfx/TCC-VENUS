@@ -21,17 +21,20 @@ const Login = () => {
         const url = 'http://localhost:5010/login/';
         try {
             const resp = await axios.post(url, usuario);
-            if (resp.data.erro) {
-                toast.error(resp.data.erro);
-            } else {
+
+            if (resp.status === 200) {
                 localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario));
                 localStorage.setItem('TOKEN', resp.data.token);
                 
                 navigate('/', { state: { usuario: resp.data.usuario } });
-            }
+            } 
         } catch (error) {
+            if (error.response && error.response.data && error.response.data.erro) {
+                toast.error(error.response.data.erro);
+            } else {
+                toast.error('Erro ao fazer login, por favor tente novamente.');
+            }
             console.error('Erro ao fazer login:', error);
-            toast.error('Erro ao fazer login, por favor tente novamente.');
         }
     }
 
