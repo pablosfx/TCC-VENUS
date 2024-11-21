@@ -65,9 +65,9 @@ export default function Cabecalho() {
 
     return (
         <div className='cabecalho'>
-            <Link to={'/'}>
+           <Link to={'/'}>
                 <img className='logo' src="/assets/images/logo.svg" alt="Logo" />
-            </Link>
+           </Link>
             <div className='teste'>
                 
                     
