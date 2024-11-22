@@ -65,9 +65,9 @@ export default function Cabecalho() {
 
     return (
         <div className='cabecalho'>
-            <Link to={'/'}>
+            
                 <img className='logo' src="/assets/images/logo.svg" alt="Logo" />
-            </Link>
+            
             <div className='teste'>
                 
                     
@@ -78,7 +78,7 @@ export default function Cabecalho() {
                             placeholder='Pesquisar...'
                             value={inputSearch}
                             onChange={handleFilter}
-                            onKeyDown={handleKeyDown} // Adicionando o manipulador de eventos
+                            onKeyDown={handleKeyDown} 
                         />
                         {inputSearch && <AiOutlineClose onClick={clearText} />}
                     </div>
