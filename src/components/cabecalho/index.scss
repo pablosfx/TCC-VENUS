@@ -21,6 +21,7 @@
   
     .logo {
       width: 11.25rem;
+    
     }
   
     
@@ -50,7 +51,11 @@
       gap: 24px;
       border: none;
       font-size: 1.5rem;
+
       position: relative;
+
+      z-index: 10;
+
       
   
   }
@@ -60,16 +65,26 @@
     height: auto; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-   position: absolute;
+    justify-content: center;   position: absolute;
     width: 50rem;
+
+    width: 54rem;
+    position: absolute;
+
     border-radius: 5px;
     background: #f1f1f1;
     border: solid 0.5px black;
     gap: 10px;
+
     z-index: 10; 
     left: 29.5%;
     top :6.7%;
+
+    z-index: 1; 
+    top: 6.6%;
+    left: 28%;
+    border: 0.5px solid black;
+
     
 }
 

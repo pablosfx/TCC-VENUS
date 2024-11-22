@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    width: 16rem; 
+    width: 18rem; 
     padding: 1rem; 
     border-radius: 0.625rem;
     &:hover {
@@ -22,25 +22,25 @@
   
     .nome-produto {
       align-self: flex-start;
-      font-size: 1.2625rem;
-      margin: 1.75rem 0;
+      font-size: 2.0625rem;
+      margin: 2.25rem 0;
     }
   
     .preco-total {
-      font-size: 1.225rem;
-      margin:  0.8rem 0;
+      font-size: 1.425rem;
+      margin:  1rem 0;
       text-decoration: line-through;
     }
   
     .preco-final {
       font-weight: 700;
       align-self: flex-start;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
       font-size: 1.5rem;
     }
   
     p.frete {
-      font-size: 27px;
+      font-size: 30px;
       margin: 1.25rem 3.125rem 0;
     }
   }
