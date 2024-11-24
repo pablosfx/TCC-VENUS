@@ -48,7 +48,7 @@ const Login = () => {
     useEffect(() => {
         const usu = localStorage.getItem('USUARIO');
         if (!usu) {
-            navigate('/');
+            navigate('/cadastrar');
         } else {
             setToken(usu);
             if (id) {
@@ -66,7 +66,7 @@ const Login = () => {
         <div className="outer-container">
             <div className="container">
                 <form onSubmit={handleSubmit}>
-                    <Link to={'/login'}>
+                    <Link to={'/'}>
                         <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
                     </Link>
                     <div className="primeira">

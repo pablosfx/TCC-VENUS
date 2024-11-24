@@ -10,6 +10,7 @@ const Login = () => {
     const [senha, setSenha] = useState('');
     const navigate = useNavigate();
 
+    // Função para processar o login
     async function entrar(e) {
         e.preventDefault();
 
@@ -26,6 +27,7 @@ const Login = () => {
                 localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario));
                 localStorage.setItem('TOKEN', resp.data.token);
                 
+                // Navega para a página inicial (home) após login bem-sucedido
                 navigate('/', { state: { usuario: resp.data.usuario } });
             } 
         } catch (error) {
@@ -43,6 +45,7 @@ const Login = () => {
             <div className="container">
                 <form onSubmit={entrar}>
                     <div className="primeira">
+                        {/* Link para voltar para a página anterior (exemplo: home ou outro lugar) */}
                         <Link to={'/'}>
                             <img className="voltar" src="/assets/images/seta-para-a-esquerda.png" alt="Voltar" />
                         </Link>
@@ -70,9 +73,11 @@ const Login = () => {
                         </div>
                         <button type="submit">Login</button>
                     </div>
-                    <div className="h1">
-                        <Link className="h1" to={'/cadastrar'}><h2>Registrar-se</h2></Link>
-                    </div> 
+
+                    <Link className="cadastrar" to="/cadastrar">
+                        <h2>Registrar-se</h2>
+                    </Link>
+
                 </form>
             </div>
             <Toaster />
