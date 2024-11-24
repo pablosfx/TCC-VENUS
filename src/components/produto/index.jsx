@@ -13,7 +13,7 @@ export default function Produto(props) {
             <div className='precos-produto'>
              <p className='preco-total'>{props.total}</p>
              <p className='preco-final'>{props.final}</p>
-             <p className='frete'>frete gratis</p>
+             <p className='frete'>Frete Grátis</p>
           </div>
           </div>
           </div>

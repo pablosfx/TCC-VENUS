@@ -11,7 +11,7 @@ export default function paginaadm() {
     <div className='cabecalho '>
 
       <div className='adm'>
-       <h1>ADIMINISTRADOR</h1>
+       <h1>ADMINISTRADOR</h1>
 
       </div>
 

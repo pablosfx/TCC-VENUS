@@ -29,7 +29,7 @@ export default function App() {
       <div className='Promocoes-geral'>
 
         <img className='nike-promoção' src="/assets/images/Nike foto.png" alt="" />
-       <Link to='/pagina-produtos'> <button className='botao-verMais'>Ver mais</button></Link>
+       <Link to='/pagina-produtos'> <button className='botao-verMais'>Ver Mais</button></Link>
       </div>
       <div className='sub-app'>
       <div className='Promocoes-demo'>
@@ -37,7 +37,7 @@ export default function App() {
           <img className='imagem-item-promocao' src="/assets/images/Nike.jpg" alt="" />
           <p className='titulo-item-promocao'>Nike </p>
           <div className='porcentagem-de-desconto'>
-            <p>até</p>
+            <p>Até</p>
             <p className='titulo-item-promocao'>60%</p>
           </div>
           <Link to={'/nike'}><button className='item-Ver'>Ver</button></Link>
@@ -46,7 +46,7 @@ export default function App() {
           <img className='imagem-item-promocao' src="/assets/images/Adidas.jpg" alt="" />
           <p className='titulo-item-promocao'>Adidas </p>
           <div className='porcentagem-de-desconto'>
-            <p>até</p>
+            <p>Até</p>
             <p className='titulo-item-promocao'>40%</p>
           </div>
           <Link to={'/adidas'}><button className='item-Ver'>Ver</button></Link>
@@ -55,7 +55,7 @@ export default function App() {
           <img className='imagem-item-promocao' src="/assets/images/Puma.jpg" alt="" />
           <p className='titulo-item-promocao'>Puma </p>
           <div className='porcentagem-de-desconto'>
-            <p>até</p>
+            <p>Até</p>
             <p className='titulo-item-promocao'>50%</p>
           </div>
           <Link to={'/puma'}><button className='item-Ver'>Ver</button></Link>
@@ -65,7 +65,7 @@ export default function App() {
 
     
 
-<h1 className='produtos-em-destaque'>Produtos em destaque</h1>
+<h1 className='produtos-em-destaque'>Produtos em Destaque</h1>
 
       <div className='produto '>
         <Produtos 
